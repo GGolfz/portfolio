@@ -1,0 +1,33 @@
+{
+  "homepage": "https://ggolfz.github.io/portfolio",
+  "name": "portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "predeploy": "npm run build && npm run export",
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "export": "nuxt export",
+    "serve": "nuxt serve",
+    "test": "jest",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "@nuxt/content": "^1.3.2",
+    "@nuxtjs/axios": "^5.11.0",
+    "element-ui": "^2.13.2",
+    "gh-pages": "^3.1.0",
+    "nuxt": "^2.13.0"
+  },
+  "devDependencies": {
+    "@vue/test-utils": "^1.0.3",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "^26.0.1",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "jest": "^26.0.1",
+    "prettier": "^2.0.5",
+    "vue-jest": "^3.0.4"
+  }
+}
