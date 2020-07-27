@@ -1,0 +1,1 @@
+window.__NUXT__=(function(a){return {staticAssetsBase:"\u002Fnuxt-dist\u002Fstatic\u002F1595875758",layout:"default",error:{statusCode:404,path:a,message:"This page could not be found"},serverRendered:false,routePath:a,config:{}}}("\u002Fhttps:\u002Fggolfz.github.io\u002Fportfolio\u002Fcontact"));
