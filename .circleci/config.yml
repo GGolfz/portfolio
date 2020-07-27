@@ -10,8 +10,10 @@ jobs:
       - node/with-cache:
           steps:
             - run: npm install
+            - run: git config --global user.email "wisarutgolf11@gmail.com"
+            - run: git config --global user.name "GGolfz"
             - run: npm run deploy
-  
+            
 workflows:
     build-and-deploy:
       jobs:
