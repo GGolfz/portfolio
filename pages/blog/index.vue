@@ -1,7 +1,7 @@
 <template>
-  <div class="container">
-    BLOG
-  </div>
+  <h2>
+    BLOG PAGE
+  </h2>
 </template>
 
 <script>
