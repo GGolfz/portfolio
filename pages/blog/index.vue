@@ -1,7 +1,7 @@
 <template>
-  <h1>
+  <div class="container">
     BLOG
-  </h1>
+  </div>
 </template>
 
 <script>
@@ -11,5 +11,13 @@ export default {
 </script>
 
 <style>
+.container {
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 
 </style>
