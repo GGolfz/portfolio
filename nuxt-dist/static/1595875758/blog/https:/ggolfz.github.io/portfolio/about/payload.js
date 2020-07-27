@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/blog/https:/ggolfz.github.io/portfolio/about", {data:[],fetch:[],mutations:void 0});
