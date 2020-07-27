@@ -1,6 +1,6 @@
 <template>
   <h1>
-      BLOG
+    BLOG
   </h1>
 </template>
 

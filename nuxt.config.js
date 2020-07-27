@@ -1,3 +1,14 @@
+const fs = require('fs')
+const routes = []
+const getRoutes = async () =>{
+  await fs.readdir('./content/blog',(err,files)=>{
+      for(let i of files){
+          let route = i.split('.')
+          routes.push('/blog/'+route[0])
+      }
+  })
+}
+getRoutes()
 
 export default {
   /*
@@ -82,9 +93,6 @@ export default {
     }
   },
   generate: {
-    routes: [
-      '/blog/first',
-      '/blog/second',
-    ]
+    routes: routes
   }
 }
