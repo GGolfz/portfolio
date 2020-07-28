@@ -1,6 +1,17 @@
 <template>
   <div>
-    <Nav/>
+    <Nav :dark="val" />
+      <div class="toggle">
+        <svg v-if="val" @click="val=!val" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FFFFFF" fill="#FFD300" stroke-linecap="round" stroke-linejoin="round" style="border-radius:50px;border:1px solid #f8f8f8">
+          <path stroke="none" d="M0 0h24v24H0z"/>
+          <circle cx="12" cy="12" r="4" />
+          <path d="M3 12h1M12 3v1M20 12h1M12 20v1M5.6 5.6l.7 .7M18.4 5.6l-.7 .7M17.7 17.7l.7 .7M6.3 17.7l-.7 .7" />
+        </svg>
+        <svg v-else @click="val=!val" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FFFFFF" fill="#212121" stroke-linecap="round" stroke-linejoin="round" style="border-radius:50px;border:1px solid #f8f8f8">
+          <path stroke="none" d="M0 0h24v24H0z"/>
+          <path d="M16.2 4a9.03 9.03 0 1 0 3.9 12a6.5 6.5 0 1 1 -3.9 -12" />
+        </svg>
+      </div>
     <Nuxt />
   </div>
 </template>
@@ -10,62 +21,30 @@ import Nav from '../components/Nav'
 export default {
   components:{
     Nav
+  },
+  data() {
+    return {
+      val: true
+    }
   }
 }
 </script>
 <style>
 html {
-  font-family:
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif, 'Titillium Web', sans-serif;
 }
-
 *,
 *::before,
 *::after {
   box-sizing: border-box;
   margin: 0;
 }
-
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
+.toggle {
+  width: fit-content;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1.5%;
 }
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
-}
 </style>

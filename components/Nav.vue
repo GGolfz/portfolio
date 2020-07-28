@@ -1,22 +1,25 @@
 <template>
   <el-menu
-    class="nav"
+    :class="dark?'nav dark': 'nav light'"
     mode="horizontal"
-    active-text-color="black"
-    text-color="grey"
-    background-color="white"
+    :active-text-color="dark?'#f8f8f8':'#2F2F2F'"
+    :text-color="dark?'#bdbdbd':'#4c4c4c'"
+    :background-color="dark?'#212121':'#efefef'"
     :default-active="current"
   >
+    <el-menu-item style="padding:0%" index="1">
+      <img src="logo.png" alt="logo" height="100%" style="transform: scaleX(-1);">
+    </el-menu-item>
     <el-menu-item
       v-for="(item, index) in menu"
       :key="index"
-      :index="`` + (index + 1)"
+      :index="`` + (index + 2)"
       @click="goto(item)"
     >
       <nuxt-link :to="`/${item == 'Home' ? '' : item.toLowerCase()}`"
         >{{ item }}
-      </nuxt-link></el-menu-item
-    >
+      </nuxt-link>
+    </el-menu-item>
   </el-menu>
 </template>
 
@@ -28,6 +31,9 @@ export default {
       current: '',
     }
   },
+  props: {
+    dark:Boolean
+  },
   methods: {
     goto(href) {
       if (href == 'Home') {
@@ -38,11 +44,15 @@ export default {
   },
   async mounted() {
     const path = this.$route.name
-    await this.menu.forEach((el, index) => {
-      if (el.toLowerCase() == path) {
-        this.current = `` + (index + 1)
-      }
-    })
+    if(path == 'index'){
+      this.current = '2'
+    } else {
+      await this.menu.forEach((el, index) => {
+        if (el.toLowerCase() == path) {
+          this.current = `` + (index + 2)
+        }
+      })
+    }
   },
 }
 </script>
@@ -57,11 +67,13 @@ export default {
 }
 .el-menu.el-menu--horizontal {
   border-bottom: none;
+  padding: 1% 0%;
 }
 .el-menu-item {
   transition: none;
   font-size: 1.1em;
   font-family: 'Titillium Web', sans-serif;
+  font-weight: 400;
 }
 .el-menu-item:hover {
   background: none !important;
@@ -69,8 +81,14 @@ export default {
 a {
   text-decoration: none;
 }
-.el-menu--horizontal > .el-menu-item.is-active > a {
+.light.el-menu--horizontal > .el-menu-item.is-active > a {
   padding-bottom: 5px;
-  border-bottom: 2px black solid;
+  border-bottom: 2px #CBB7A6 solid;
+  font-weight: 600;
+}
+.dark.el-menu--horizontal > .el-menu-item.is-active > a {
+  padding-bottom: 5px;
+  border-bottom: 2px #c99d78 solid;
+  font-weight: 600;
 }
 </style>
