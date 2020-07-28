@@ -9,16 +9,8 @@
 
 <script>
 export default {
-
-  data() {
-    return {
-      dark: true
-    }
-  },
-  methods: {
-    change(){
-      this.dark= !this.dark
-    }
+  props: {
+    dark: Boolean
   }
 }
 </script>
