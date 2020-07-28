@@ -1,13 +1,18 @@
 <template>
-  <h2>Award Page</h2>
+  <div :class="dark?'container dark-theme':'container light-theme'">
+    <div>
+      Award Page
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
-
+  props: {
+    dark: Boolean
+  }
 }
 </script>
 
 <style>
-
 </style>
