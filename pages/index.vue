@@ -2,12 +2,25 @@
   <div class="container">
     <div>
       Hello GGolfz
+      {{dark}}
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+
+  data() {
+    return {
+      dark: true
+    }
+  },
+  methods: {
+    change(){
+      this.dark= !this.dark
+    }
+  }
+}
 </script>
 
 <style>
