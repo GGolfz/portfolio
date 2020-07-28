@@ -1,23 +1,24 @@
 <template>
   <div :class="dark?'container dark-theme':'container light-theme'">
-    <div>
-      <h1>{{ data.title }}</h1>
-      <p>{{ data.description }}</p>
-      <nuxt-content :document="data" />
-    </div>
+    <BlogDetail :data="data" :dark="dark"/>
   </div>
 </template>
 
 <script>
+import BlogDetail from '../../components/blogdetail'
+import markdown from 'remark-attr'
 export default {
   props: {
     dark: Boolean
   },
+  components: {
+    BlogDetail
+  },
   async asyncData ({ $content, params }) {
     const data = await $content('blog', params.slug).fetch()
-
     return { data }
-  }
+  },
+  
 }
 </script>
 
@@ -38,4 +39,6 @@ export default {
   background:#fcfcfc;
   color:#606060;
 }
+
+
 </style>

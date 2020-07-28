@@ -31,7 +31,7 @@ export default {
     return {
       menu: ['Home', 'About', 'Blog', 'Award', 'Project', 'Contact'],
       current: '',
-      isHome: true
+      isHome: false
     }
   },
   props: {
@@ -50,7 +50,7 @@ export default {
     },
   },
   async mounted() {
-    const path = this.$route.name
+    const path = this.$route.path.split('/')[1]
     if(path == 'index'){
       this.current = '2'
       this.isHome = true

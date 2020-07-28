@@ -1,5 +1,5 @@
 <template>
-  <div class="box">
+  <div class="box" @click="goto(data.slug)">
       <el-row>
           <el-col :span="24">
               <img width="100%" :src="data.blogimg"/>
@@ -44,6 +44,9 @@ export default {
         dark:Boolean
     },
     methods: {
+        goto(path){
+            this.$router.push({ path: '/blog/' + path.toLowerCase() })
+        },
         formatTime(time){
             let date = new Date(time)
             let weekday = date.getDay()
@@ -91,6 +94,7 @@ export default {
     font-family: 'Titillium Web', sans-serif;
     font-size: 1em;
     margin-left: 2px;
+    margin-top: 5px;
 }
 .blog-dark.blog-tag {
     color: #c99d78;
@@ -113,6 +117,7 @@ export default {
     font-weight: 400;
     font-family: 'Montserrat', sans-serif;
     font-size: 1em;
+    margin-top: 2px;
 }
 .blog-dark.blog-description {
     color: #dcdcdc;
@@ -124,7 +129,7 @@ export default {
     font-weight: 400;
     font-family: 'Titillium Web', sans-serif;
     font-size: 0.95em;
-    margin-top: 2%;
+    margin-top: 3%;
 }
 .blog-dark.blog-author {
     color: #FFFFFFBF;

@@ -28,6 +28,9 @@ export default {
     return {
       val: true
     }
+  },
+  mounted() {
+    console.log(this.$content)
   }
 }
 </script>

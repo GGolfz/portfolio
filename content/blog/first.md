@@ -7,6 +7,24 @@ tag: blog
 author: WISARUT KITTICHAROENPHONNGAM
 readTime: 2 MINS READ
 ---
-# My first blog post
+# Fist 
 
-Welcome to my first blog post using content module
+## FIRST BLOG
+<br/>
+
+> FIRST
+
+<br/>
+    หื้มม
+  dsa
+
+```
+const http = require('http')
+const bodyParser = require('body-parser')
+
+http.createServer((req, res) => {
+  bodyParser.parse(req, (error, body) => {
+    res.end(body)
+  })
+}).listen(3000)
+```

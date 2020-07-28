@@ -29,6 +29,7 @@
       direction="ltr"
       size="100%"
       :with-header="false"
+      :modal="false"
     >
     <div class="container">
         <el-row style="height:100vh;width:100vw">
@@ -40,6 +41,10 @@
                 </svg>
             </el-col>
             <el-col :span="18">
+            </el-col>
+            <el-col :span="24"
+                style="margin-bottom:3%">
+                <img src="logo.png" alt="logo" width="50%" style="transform: scaleX(-1);cursor:pointer" @click="goto('Home')">
             </el-col>
             <el-col :span="24">
                 <div
@@ -92,7 +97,7 @@ export default {
     },
   },
   async mounted() {
-    const path = this.$route.name
+    const path = this.$route.path.split('/')[1]
     if(path == 'index'){
       this.current = 'Home'
       this.isHome = true

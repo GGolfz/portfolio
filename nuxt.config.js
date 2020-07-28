@@ -41,6 +41,17 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/*', href: 'logo.png' },
+      { rel: "preconnect", href: "https://cdn.jsdelivr.net"},
+      { rel: "dns-prefetch", href: "https://cdn.jsdelivr.net"},
+      {
+        rel: "preload",
+        as: "style",
+        href: "https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css",
+        integrity:
+          "sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq",
+        crossorigin: "anonymous",
+        onload: "this.onload=null;this.rel='stylesheet'"
+      },
       { rel: 'stylesheet', href:'https://fonts.googleapis.com/css2?family=Montserrat&family=Titillium+Web:wght@400;600&display=swap' },
       { rel: 'stylesheet', href:'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css'}
     ]
@@ -86,7 +97,19 @@ export default {
   ** Content module configuration
   ** See https://content.nuxtjs.org/configuration
   */
-  content: {},
+  content: {
+    markdown: {
+      remarkPlugins: () => [
+        "remark-squeeze-paragraphs",
+        "remark-slug",
+        "remark-external-links",
+        "remark-math",
+        "remark-attr",
+        "~/plugins/remark-sub-super-modified.js"
+      ],
+      rehypePlugins: ["rehype-katex"]
+    }
+  },
   /*
   ** Build configuration
   ** See https://nuxtjs.org/api/configuration-build/

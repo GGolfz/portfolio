@@ -18,7 +18,14 @@
     "@nuxtjs/axios": "^5.11.0",
     "element-ui": "^2.13.2",
     "gh-pages": "^3.1.0",
-    "nuxt": "^2.13.0"
+    "nuxt": "^2.13.0",
+    "rehype-katex": "^3.0.0",
+    "remark-attr": "^0.11.1",
+    "remark-external-links": "^6.1.0",
+    "remark-math": "^2.0.1",
+    "remark-slug": "^6.0.0",
+    "remark-squeeze-paragraphs": "^4.0.0",
+    "remark-unwrap-images": "^2.0.0"
   },
   "devDependencies": {
     "@vue/test-utils": "^1.0.3",
