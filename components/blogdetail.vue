@@ -171,4 +171,18 @@ blockquote{
   border-left: 0.2em solid #606060;
   color: #606060;
 }
+.dark-content pre.language-text.line-numbers {
+    background: #0A0A0A;
+}
+.light-content pre.language-text.line-numbers {
+    background: #f5f2f0;
+}
+.dark-content code {
+    color: #F8F8F8;
+    text-shadow:none;
+}
+.light-content code {
+    color: #2F2F2F;
+    text-shadow:none;
+}
 </style>
