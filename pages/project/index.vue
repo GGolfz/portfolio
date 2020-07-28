@@ -10,9 +10,30 @@
 export default {
   props: {
     dark: Boolean
+  },
+  async asyncData ({ $content, params }) {
+    const data = await $content('project').fetch()
+    console.log(data)
+    return { data }
   }
 }
 </script>
 
 <style>
+.container {
+  margin: 0 auto;
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.dark-theme {
+  background:#212121;
+  color:#dcdcdc;
+}
+.light-theme {
+  background:#fcfcfc;
+  color:#606060;
+}
 </style>

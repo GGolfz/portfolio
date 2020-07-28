@@ -41,7 +41,8 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/*', href: 'logo.png' },
-      { rel: 'stylesheet', href:'https://fonts.googleapis.com/css2?family=Montserrat&family=Titillium+Web:wght@400;600&display=swap' }
+      { rel: 'stylesheet', href:'https://fonts.googleapis.com/css2?family=Montserrat&family=Titillium+Web:wght@400;600&display=swap' },
+      { rel: 'stylesheet', href:'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css'}
     ]
   },
   /*
