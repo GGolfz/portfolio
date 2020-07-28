@@ -1,10 +1,14 @@
 const fs = require('fs')
 const routes = []
 const getRoutes = async () =>{
-  await fs.readdir('./content/blog',(err,files)=>{
-      for(let i of files){
-          let route = i.split('.')
-          routes.push('/blog/'+route[0])
+  await fs.readdir('./content/',async (err,dirs)=>{
+      for(let i of dirs){
+          await fs.readdir('./content/'+i,(err,files)=>{
+              for(let j of files){
+                  let route = j.split('.')
+                  routes.push('/'+i+'/'+route[0])
+              }
+          })
       }
   })
 }

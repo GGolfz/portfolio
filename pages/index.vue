@@ -1,7 +1,6 @@
 <template>
   <div :class="dark?'container dark-theme':'container light-theme'">
-    <div>
-      Hello GGolfz
+    <div class="banner">
     </div>
   </div>
 </template>
@@ -20,7 +19,6 @@ export default {
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
   text-align: center;
 }
 .dark-theme {
