@@ -1,31 +1,49 @@
 <template>
     <div class="blog-detail">
       <el-row :class="dark?'dark-content blog-detail-header':'light-content blog-detail-header'">
-        <el-col :span="24">
+        <el-col :span="24" :class="dark?'blog-dark blog-content-tag':'blog-light blog-content-tag'">
+            <i class="far fa-bookmark" />
+              <span style="margin-left:2px">
+              {{data.tag}}
+              </span>        
+        </el-col>
+        <el-col :span="24" style="padding-bottom:1%;border-bottom:#7b7b7b solid 1px">
             <h1 :class="dark?'dark-content blog-content-header':'light-content blog-content-header'">{{ data.title }}</h1>
         </el-col>
+        <el-col :span="24" :class="dark?'blog-dark blog-content-author':'blog-light blog-content-author'" style="margin-bottom:2%">
+              <el-row style="align-items:center;display:flex">
+                  <el-col :span="2">
+                      <img src="profile.jpg" width="100%" style="border-radius:200px">
+                  </el-col>
+                  <el-col :span="22" style="padding-left:2%">
+                      <el-row>
+                          <el-col :span="24">
+                            {{data.author}}
+                          </el-col>
+                          <el-col :span="24" :class="dark?'blog-dark blog-time':'blog-light blog-time'">
+                            {{formatTime(data.createdAt)}} · {{data.readTime}}
+                          </el-col>
+                      </el-row>
+                  </el-col>
+              </el-row>
+          </el-col>
       </el-row>
       <el-row class="blog-detail-image-header">
           <el-col :span="24">
               <img :src="data.blogimg" width="100%" alt="blog-img">
           </el-col>
       </el-row>
-      <article>
+      <article style="margin-top:1%">
         <nuxt-content :class="dark?'dark-content blog-detail-content':'light-content blog-detail-content'" :document="data" />
       </article>
     </div>
-  
 </template>
-
 
 <script>
 export default {
     props: {
         data:Object,
         dark:Boolean
-    },
-    mounted() {
-        console.log(this)
     },
     methods: {
         formatTime(time){
@@ -67,6 +85,31 @@ export default {
 .blog-detail{
     width:100%;
     text-align: left;
+}
+.blog-content-tag {
+    font-weight: 600;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.3em;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+.blog-dark.blog-content-tag {
+    color: #c99d78;
+}
+.blog-light.blog-content-tag {
+    color: #d2aa88;
+}
+.blog-content-author {
+    font-weight: 400;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.1em;
+    margin-top: 3%;
+}
+.blog-dark.blog-content-author {
+    color: #FFFFFFBF;
+}
+.blog-light.blog-content-author {
+    color: #4C4C4CBF;
 }
 .blog-detail-header{
     padding: 0% 15%
