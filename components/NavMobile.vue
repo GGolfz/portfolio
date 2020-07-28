@@ -1,6 +1,6 @@
 <template>
   <el-menu
-    :class="dark?'dark': 'light'"
+    :class="dark?'mo dark': 'mo light'"
     mode="horizontal"
     :active-text-color="dark?'#f8f8f8':'#2F2F2F'"
     :text-color="dark?'#bdbdbd':'#4c4c4c'"
@@ -121,6 +121,9 @@ export default {
 }
 .el-menu-item:hover {
   background: none !important;
+}
+.mo {
+    height: 80px;
 }
 .dark a {
   font-weight: 400;

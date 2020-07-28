@@ -69,6 +69,7 @@ export default {
 .nav {
   display: flex;
   justify-content: center;
+  height: 80px;
 }
 .title {
     font-family: 'Titillium Web', sans-serif;

@@ -13,7 +13,7 @@
           <path d="M16.2 4a9.03 9.03 0 1 0 3.9 12a6.5 6.5 0 1 1 -3.9 -12" />
         </svg>
       </div>
-      <router-view :dark="val" />
+      <router-view :dark="val" style="margin-top:80px" />
   </div>
 </template>
 
@@ -59,6 +59,13 @@ html {
   box-sizing: border-box;
   margin: 0;
 }
+.desktop,.mobile {
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100vw;
+  z-index: 1200;
+}
 .toggle {
   width: fit-content;
   position: fixed;
@@ -71,6 +78,7 @@ html {
   align-items: center;
   justify-items: center;
   cursor:pointer;
+  z-index: 1000;
 }
 .light {
   background: #ffcc00ee;
