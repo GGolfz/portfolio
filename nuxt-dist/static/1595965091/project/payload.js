@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/project", (function(a){return {data:[{data:[{toc:[],body:{type:"root",children:[]},dir:"\u002Fproject",path:"\u002Fproject\u002Ffirst",extension:".md",slug:"first",createdAt:a,updatedAt:a}]}],fetch:[],mutations:void 0}}("2020-07-28T19:37:00.371Z")));
