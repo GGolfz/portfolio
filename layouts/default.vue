@@ -13,7 +13,7 @@
           <path d="M16.2 4a9.03 9.03 0 1 0 3.9 12a6.5 6.5 0 1 1 -3.9 -12" />
         </svg>
       </div>
-    <Nuxt />
+    <Nuxt/>
   </div>
 </template>
 
@@ -27,6 +27,15 @@ export default {
   data() {
     return {
       val: true
+    }
+  },
+  watch: {
+    val() {
+      this.$children.forEach((el)=>{
+        if(el._name === '<Nuxt>'){
+          el.$children[0].change()
+        }
+      })
     }
   }
 }
