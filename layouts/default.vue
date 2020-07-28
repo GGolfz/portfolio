@@ -34,7 +34,7 @@ export default {
 <style>
 @media only screen and (max-width: 600px) {
   .desktop{
-    display: none;
+    display: none !important;
   }
   .mobile {
     display: block;
