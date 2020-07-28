@@ -4,11 +4,12 @@
     mode="horizontal"
     :active-text-color="dark?'#f8f8f8':'#2F2F2F'"
     :text-color="dark?'#bdbdbd':'#4c4c4c'"
-    :background-color="dark?'#212121':'#efefef'"
+    :background-color="dark?'#0a0a0a':'#efefef'"
     :default-active="current"
   >
     <el-menu-item style="padding:0%" index="1" @click="goto('Home')">
       <img src="logo.png" alt="logo" height="100%" style="transform: scaleX(-1);">
+      <span :class="dark?'title title-dark':'title title-light'">GGolfz</span>
     </el-menu-item>
     <el-menu-item
       v-for="(item, index) in menu"
@@ -68,6 +69,17 @@ export default {
 .nav {
   display: flex;
   justify-content: center;
+}
+.title {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+.title.title-dark {
+    color:#f8f8f8;
+}
+.title.title-light {
+    color:#2F2F2F;
 }
 .el-menu--horizontal > .el-menu-item.is-active {
   border-bottom: none;

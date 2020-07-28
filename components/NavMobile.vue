@@ -4,7 +4,7 @@
     mode="horizontal"
     :active-text-color="dark?'#f8f8f8':'#2F2F2F'"
     :text-color="dark?'#bdbdbd':'#4c4c4c'"
-    :background-color="dark?'#212121':'#efefef'"
+    :background-color="dark?'#0a0a0a':'#efefef'"
     :default-active="current"
   >
     <el-col :span="6">
@@ -17,8 +17,9 @@
     </el-menu-item>
     </el-col>
     <el-col :span="12">
-    <el-menu-item style="text-align:center;padding:0%;cursor:default" index="1">
-      <img src="logo.png" alt="logo" height="100%" style="transform: scaleX(-1);cursor:pointer"  @click="goto('Home')">
+    <el-menu-item style="text-align:center;padding:0%;cursor:default" index="1" >
+      <img src="logo.png" alt="logo" height="100%" style="transform: scaleX(-1);cursor:pointer" @click="goto('Home')">
+      <span :class="dark?'title-mobile title-dark':'title-mobile title-light'" @click="goto('Home')">GGolfz</span>
     </el-menu-item>
     </el-col>
     <el-col :span="6">
@@ -133,6 +134,17 @@ export default {
   font-weight: 400;
   color:#4c4c4c;
 }
+.title-mobile {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 2em;
+    cursor: pointer;
+}
+.title-mobile.title-dark {
+    color:#f8f8f8;
+}
+.title-mobile.title-light {
+    color:#2F2F2F;
+}
 .dark .active a {
   font-weight: 600;
   font-family: 'Titillium Web', sans-serif;
@@ -146,7 +158,7 @@ export default {
   border-bottom: #2F2F2F solid 2px ;
 }
 .dark .container {
-  background: #212121
+  background: #0a0a0a
 }
 .container {
   height:100vh;
