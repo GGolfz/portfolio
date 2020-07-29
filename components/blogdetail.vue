@@ -239,12 +239,18 @@ export default {
   p {
     font-size: 1.2em;
   }
+  h1.blog-content-header{
+    font-size: 2.4em;
+  }
   .toc-menu {
     display: none;
   }
   .blog-nav-img {
     display: none;
   }
+.blog-detail-header {
+  padding: 0% 10%;
+}
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   h1 {
@@ -274,6 +280,12 @@ export default {
   .toc-menu {
     padding-right:5%;
   }
+  h1.blog-content-header{
+    font-size: 3em;
+  }
+.blog-detail-header {
+  padding: 0% 15%;
+}
 }
 @media only screen and (min-width: 1025px) {
   h1 {
@@ -284,6 +296,9 @@ export default {
   }
   p {
     font-size: 1.3em;
+  }
+  h1.blog-content-header{
+    font-size: 3em;
   }
   .toc-sticky {
     position: sticky;
@@ -302,6 +317,9 @@ export default {
   .toc-menu {
     padding-right:3%;
   }
+.blog-detail-header {
+  padding: 0% 15%;
+}
 }
   .blog-detail-content {
     padding: 0% 5% !important;
@@ -334,9 +352,6 @@ export default {
 }
 .blog-light.blog-content-author {
   color: #4c4c4cbf;
-}
-.blog-detail-header {
-  padding: 0% 15%;
 }
 .blog-nav {
   margin-top: 2%;
@@ -377,11 +392,9 @@ a .blog-nav-sub {
 }
 h1.dark-content.blog-content-header {
   color: #f8f8f8;
-  font-size: 3em;
 }
 h1.light-content.blog-content-header {
   color: #2f2f2f;
-  font-size: 3em;
 }
 .blog-detail-image-header {
   padding: 0% 5%;
