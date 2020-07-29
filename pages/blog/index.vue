@@ -45,7 +45,7 @@ export default {
 .container {
   margin: 0 auto;
   padding: 3% 5%;
-  min-height: 100vh;
+  min-height: calc(100vh - 80px);
   height: auto;
   display: flex;
   justify-content: center;
