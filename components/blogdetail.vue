@@ -261,6 +261,7 @@ export default {
   }
   .toc-sticky {
     position: sticky;
+    position: -webkit-sticky;
     top: 85px;
     text-align: center;
   }
