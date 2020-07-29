@@ -70,7 +70,7 @@
 export default {
   data() {
     return {
-      menu: ['Home', 'About', 'Showcase', 'Project', 'Contact'],
+      menu: ['Home', 'About','Blog','Showcase', 'Contact'],
       current: '',
       isHome: true,
       drawer: false
