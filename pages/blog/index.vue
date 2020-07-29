@@ -39,8 +39,21 @@ export default {
   },
   watch: {
     search(val) {
-      this.show = this.data.filter(a=> {return new RegExp(val.toLowerCase()).test(a.title.substring(0,val.length).toLowerCase())})
-      console.log(this.show)
+      if(val == ''){
+        this.show = this.data
+      } else{
+        this.show = this.data.filter(a=> {return new RegExp(val.toLowerCase()).test(a.title.substring(0,val.length).toLowerCase())})
+        if(this.show.length == 0){
+          this.show = this.data
+          this.$message({
+            type: 'error',
+            showClose: true,
+            message:'Not Found',
+            duration: '1000'
+            })
+        }
+      }
+      
     }
   }
 }
