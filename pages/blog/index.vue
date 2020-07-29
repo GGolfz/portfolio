@@ -5,7 +5,16 @@
         <h1 :class="dark?'dark-blog-header blog-header':'light-blog-header blog-header'">Blog</h1>
       </el-col>
       <el-col :span="24">
-        <el-input v-model="search" />
+        <el-row style="display:flex;justify-content:center;padding: 2% 6%">
+          <el-col :xs="24" :md="8" :sm="12">
+            <el-input v-model="search" placeholder="Search by title" />
+          </el-col>
+        </el-row>
+        <el-row>
+          <el-col :span="24" class="tag-list">
+            <li @click="searchtag(tag)" class="tag-list-item" v-for="(tag,index) in tags" :key="index">{{tag}}</li>
+          </el-col>
+        </el-row>
       </el-col>
       <el-col :md="8" :xs="24" :sm="12" v-for="(d,index) in show" :key="index" >
         <Box :data="d" :dark="dark" />
@@ -23,7 +32,9 @@ export default {
   data() {
     return {
       search: '',
-      show: []
+      show: [],
+      tags: ["All"],
+      clear: false
     }
   },
   props: {
@@ -32,28 +43,48 @@ export default {
   mounted() {
     window.scrollTo(0,0);
     this.show = this.data
+    this.data.forEach((el)=>{
+      if(this.tags.indexOf(el.tag) == -1){
+        this.tags.push(el.tag)
+      }
+    })
   },
   async asyncData ({ $content, params }) {
     const data = await $content('blog').sortBy('createdAt','desc').fetch()
     return { data }
   },
-  watch: {
-    search(val) {
-      if(val == ''){
+  methods: {
+    searchtag(tag){
+      this.clear = true
+      this.search = ''
+      if(tag == 'All'){
         this.show = this.data
       } else{
-        this.show = this.data.filter(a=> {return new RegExp(val.toLowerCase()).test(a.title.substring(0,val.length).toLowerCase())})
-        if(this.show.length == 0){
-          this.show = this.data
-          this.$message({
-            type: 'error',
-            showClose: true,
-            message:'Not Found',
-            duration: '1000'
-            })
-        }
+        this.show = this.data.filter(a=> a.tag == tag)
       }
-      
+    }
+  },
+  watch: {
+    search(val) {
+      if(this.clear){
+        this.clear = false
+      }
+      else {
+        if(val == ''){
+          this.show = this.data
+        } else{
+          this.show = this.data.filter(a=> {return new RegExp(val.toLowerCase()).test(a.title.substring(0,val.length).toLowerCase())})
+          if(this.show.length == 0){
+            this.show = this.data
+            this.$message({
+              type: 'error',
+              showClose: true,
+              message:'Not Found',
+              duration: '1000'
+              })
+          }
+        } 
+      }
     }
   }
 }
@@ -70,6 +101,26 @@ export default {
 }
 .light-blog-header.blog-header {
   color: #2f2f2F;
+}
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0% 3% 1% 3%;
+  list-style: none;
+  justify-content: center;
+}
+.dark-theme .tag-list-item {
+    color: #c99d78;
+}
+.light-theme .tag-list-item {
+    color: #d2aa88;
+}
+.tag-list-item {
+  margin: 0% 1%;
+  font-size: 1.2em;
+  cursor:pointer;
+  font-weight: 600;
+  font-family: 'Titillium Web', sans-serif;
 }
 .container {
   margin: 0 auto;
