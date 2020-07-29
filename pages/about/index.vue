@@ -1,8 +1,6 @@
 <template>
   <div :class="dark?'container dark-theme':'container light-theme'">
-    <div>
-      About Page
-    </div>
+    <Profile/>
   </div>
 </template>
 

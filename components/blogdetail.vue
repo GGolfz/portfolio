@@ -229,7 +229,7 @@ export default {
 </script>
 
 <style>
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 767px) {
   h1 {
     font-size: 2em;
   }
@@ -243,10 +243,13 @@ export default {
     display: none;
   }
   .blog-nav-img {
-    display:none;
+    display: none;
+  }
+  .blog-detail-content {
+    padding: 0% 10% !important;
   }
 }
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   h1 {
     font-size: 2.8em;
   }
