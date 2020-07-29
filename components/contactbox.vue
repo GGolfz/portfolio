@@ -26,25 +26,23 @@ export default {
 <style>
 @media only screen and (max-width: 767px) {
   .contact-card {
-    height: 70px;
     text-align: left;
     padding: 4%;
+    font-size: 1.2em;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .contact-card {
-    height: 80px;
     text-align: left;
     padding: 4%;
-    font-size: 1.1em;
+    font-size: 1.3em;
   }
 }
 @media only screen and (min-width: 992px) {
   .contact-card {
-    height: 90px;
     text-align: left;
     padding: 4%;
-    font-size: 1.2em;
+    font-size: 1.4em;
   }
 }
 .contact-card {
