@@ -29,28 +29,32 @@ export default {
                     name: "Facebook",
                     icon: "facebook",
                     value: "fb.me/ggolfz.wsr",
-                    color: "#4267B2",
+                    lightcolor: "#4267B2",
+                    darkcolor: "#3b5998",
                     prefix: "https://"
                 },
                 {
                     name: "Email Address",
                     icon: "google-plus",
                     value: "info.ggolfz@gmail.com",
-                    color: "#D44638",
+                    lightcolor: "#D44638",
+                    darkcolor: "#D44638",
                     prefix: "mailto:"
                 },
                 {
                     name: "LinkedIn",
                     icon: "linkedin",
                     value: "linkedin.com/in/ggolfz",
-                    color: "#0077b5",
+                    lightcolor: "#0077b5",
+                    darkcolor: "#0077b5",
                     prefix: "https://"
                 },
                 {
                     name: "Github",
                     icon: "github",
                     value: "github.com/ggolfz",
-                    color: "#24292e",
+                    lightcolor: "#24292e",
+                    darkcolor: "#f6f8fa",
                     prefix: "https://"
                 }
             ]
