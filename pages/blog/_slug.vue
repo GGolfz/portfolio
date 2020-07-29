@@ -6,7 +6,6 @@
 
 <script>
 import BlogDetail from '../../components/blogdetail'
-import markdown from 'remark-attr'
 export default {
   props: {
     dark: Boolean
