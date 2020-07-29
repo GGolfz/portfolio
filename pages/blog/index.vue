@@ -4,7 +4,10 @@
       <el-col :span="24">
         <h1 :class="dark?'dark-blog-header blog-header':'light-blog-header blog-header'">Blog</h1>
       </el-col>
-      <el-col :md="8" :xs="24" :sm="12" v-for="(d,index) in data" :key="index" >
+      <el-col :span="24">
+        <el-input v-model="search" />
+      </el-col>
+      <el-col :md="8" :xs="24" :sm="12" v-for="(d,index) in show" :key="index" >
         <Box :data="d" :dark="dark" />
       </el-col>
     </el-row>
@@ -17,15 +20,28 @@ export default {
   components: {
     Box
   },
+  data() {
+    return {
+      search: '',
+      show: []
+    }
+  },
   props: {
     dark: Boolean
   },
   mounted() {
     window.scrollTo(0,0);
+    this.show = this.data
   },
   async asyncData ({ $content, params }) {
     const data = await $content('blog').sortBy('createdAt','desc').fetch()
     return { data }
+  },
+  watch: {
+    search(val) {
+      this.show = this.data.filter(a=> {return new RegExp(val.toLowerCase()).test(a.title.substring(0,val.length).toLowerCase())})
+      console.log(this.show)
+    }
   }
 }
 </script>
