@@ -82,6 +82,39 @@ export default {
 </script>
 
 <style>
+@media only screen and (max-width: 600px) {
+  h1{
+    font-size: 2em;
+  }
+  h2{
+    font-size: 1.5em;
+  }
+  p{
+    font-size: 1.2em;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width:1024px) {
+  h1{
+    font-size: 2.8em;
+  }
+  h2{
+    font-size: 2.4em;
+  }
+  p{
+    font-size: 1.1em;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  h1{
+    font-size: 3em;
+  }
+  h2{
+    font-size: 2.5em;
+  }
+  p{
+    font-size: 1.5em;
+  }
+}
 .blog-detail{
     width:100%;
     text-align: left;
@@ -118,6 +151,10 @@ h1.dark-content.blog-content-header{
     color: #f8f8f8;
     font-size: 3em;
 }
+h1.light-content.blog-content-header{
+    color: #2f2f2f;
+    font-size: 3em;
+}
 .blog-detail-image-header {
     padding: 0% 5%
 }
@@ -125,18 +162,16 @@ h1.dark-content.blog-content-header{
     padding: 0% 15%
 }
 h1{
-  font-size:2.5em;
   font-weight: 600;
   font-family: 'Titillium Web', sans-serif;
 }
 .dark-content h1 {
-  color: #bdbdbd;
+  color: #f8f8f8;
 }
 .light-content h1 {
-  color: #4c4c4c
+  color: #2f2f2f
 }
 h2{
-  font-size:1.8em;
   font-weight: 600;
   font-family: 'Titillium Web', sans-serif;
 }
@@ -147,7 +182,6 @@ h2{
   color: #4c4c4c
 }
 p{
-  font-size:1.2em;
   font-weight: 400;
   font-family: 'Montserrat', sans-serif;
 }
@@ -161,7 +195,7 @@ blockquote{
   font-weight: 400;
   font-family: 'Montserrat', sans-serif;
   margin-left: 0;
-  padding: .4rem .8rem;
+  padding: .4em .8em;
 }
 .dark-content blockquote {
   border-left: 0.2em solid #dcdcdc;
@@ -180,9 +214,11 @@ blockquote{
 .dark-content code {
     color: #F8F8F8;
     text-shadow:none;
+    font-size: 1.2em;
 }
 .light-content code {
     color: #2F2F2F;
     text-shadow:none;
+    font-size: 1.2em;
 }
 </style>
