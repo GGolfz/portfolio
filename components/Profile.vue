@@ -27,7 +27,7 @@
                 In addition, I am also interested in System Analysis and Design because I believe that an efficient system and well design in terms of the user interface (UI) and user experience (UX) will make people's lives better.
               </p>
       </section>
-      <el-col :span="24" class="about-content">
+      <el-col :span="24" class="about-content divider">
           <el-row class="about-tech">
               <el-col :xs="24" :sm="24" :md="12">
                   <el-row>
@@ -172,6 +172,11 @@ export default {
     .about-edu-item {
         margin: 3% 0% 3% 6%;
     }
+    .divider {
+        padding-top: 2%;
+        border-top: 1px solid #7b7b7b;
+    }
+
 }
 @media only screen and (min-width: 992px) {
     .about-name {
@@ -191,6 +196,10 @@ export default {
     }
     .about-edu-item {
         margin: 4% 0% 4% 3%;
+    }
+    .divider {
+        padding-top: 2%;
+        border-top: 1px solid #7b7b7b;
     }
 }   
     .about-skill-item{
@@ -227,8 +236,10 @@ export default {
 }
 .dark-content .about-title {
   color: #CBB7A6;
+  font-weight: bolder;
 }
 .light-content .about-title {
   color: #c99d78;
+  font-weight: bolder;
 }
 </style>

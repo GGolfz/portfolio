@@ -1,7 +1,7 @@
 <template>
   <div :class="dark?'container dark-theme':'container light-theme'">
     <div class="banner">
-      HOME PAGE
+      HOME PAGE - sticky with nowrap
     </div>
   </div>
 </template>
