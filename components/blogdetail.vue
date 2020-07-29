@@ -81,7 +81,7 @@
     :background-color="dark?'#0a0a0a':'#efefef'"
     style="border-right:none">
             <el-menu-item class="toc-title">
-              <span>Table of contents</span>
+              <span :style="dark?'color:#c99d78;font-weight:600;':'color:##d2aa88;font-weight:600'">Table of contents</span>
             </el-menu-item>
             <el-menu-item v-for="header in data.toc" :key="header.id" class="toc-item">
               <a @click="gotoHash(header.id)">{{ header.text }}</a>
@@ -92,6 +92,48 @@
         <article>
           <nuxt-content :document="data" />
         </article>
+      </el-col>
+    </el-row>
+    <el-row 
+      :class="
+        dark
+          ? 'dark-content blog-detail-content blog-nav'
+          : 'light-content blog-detail-content blog-nav'">
+      <el-col :span="12" class="blog-next-nav">
+        <div v-if="next">
+          <a :href="`/portfolio/blog/${next.slug}`">
+            <div class="blog-nav-sub">
+              <i class="fa fa-arrow-left" aria-hidden="true" style="margin-right:2px" /> บทความถัดไป
+            </div>
+            <div class="blog-nav-title">
+            {{next.title}}
+            </div>
+            <div class="blog-nav-img">
+              <img :src="next.blogimg" width="60%">
+            </div>
+          </a>
+        </div>
+        <div v-else>
+          &nbsp;
+        </div>
+      </el-col>
+      <el-col :span="12" class="blog-prev-nav">
+        <div v-if="prev">
+          <a :href="`/portfolio/blog/${prev.slug}`">
+            <div class="blog-nav-sub">
+              บทความก่อนหน้า <i class="fa fa-arrow-right" aria-hidden="true" style="margin-left:2px"/>
+            </div>
+            <div class="blog-nav-title">
+            {{prev.title}}
+            </div>
+            <div class="blog-nav-img">
+              <img :src="prev.blogimg" width="60%">
+            </div>
+          </a>
+        </div>
+        <div v-else>
+          &nbsp;
+        </div>
       </el-col>
     </el-row>
   </div>
@@ -204,6 +246,9 @@ export default {
   .toc-sticky {
     display: none;
   }
+  .blog-nav-img {
+    display:none;
+  }
 }
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
   h1 {
@@ -287,6 +332,43 @@ export default {
 .blog-detail-header {
   padding: 0% 15%;
 }
+.blog-nav {
+  margin-top: 2%;
+}
+.blog-next-nav{
+  text-align: left;
+}
+.blog-prev-nav{
+  text-align: right;
+}
+a .blog-nav-title {
+  font-size: 1.4em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+a .blog-nav-sub {
+  font-size: 1.2em;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 400;
+}
+.blog-nav-sub{
+  margin-bottom: 1%;
+}
+.blog-nav-title{
+  margin-bottom: 2%;
+}
+.dark-content a .blog-nav-sub{
+  color:#bdbdbd !important;
+}
+.dark-content a .blog-nav-title{
+  color:#d2aa88 !important;
+}
+.light-content a .blog-nav-sub{
+  color:#606060 !important;
+}
+.light-content a .blog-nav-title{
+  color:#c99d78 !important;
+}
 h1.dark-content.blog-content-header {
   color: #f8f8f8;
   font-size: 3em;
@@ -299,7 +381,7 @@ h1.light-content.blog-content-header {
   padding: 0% 5%;
 }
 .blog-detail-content {
-  padding: 0% 15%;
+  padding: 0% 5%;
 }
 h1 {
   font-weight: 600;
