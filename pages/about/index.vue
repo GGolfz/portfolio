@@ -1,23 +1,28 @@
 <template>
   <div :class="dark?'container dark-theme':'container light-theme'">
-    <div>
-      About Page
-    </div>
+    <Profile :dark="dark"/>
   </div>
 </template>
 
 <script>
+import Profile from '../../components/Profile'
 export default {
   props: {
     dark: Boolean
-  }
+  },
+  components: {
+    Profile
+  },
+  mounted() {
+    window.scrollTo(0,0);
+  },
 }
 </script>
 
 <style>
 .container {
   margin: 0 auto;
-  min-height: 100vh;
+  min-height: calc(100vh - 80px);
   height: auto;
   display: flex;
   justify-content: center;

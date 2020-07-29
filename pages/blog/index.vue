@@ -20,14 +20,12 @@ export default {
   props: {
     dark: Boolean
   },
+  mounted() {
+    window.scrollTo(0,0);
+  },
   async asyncData ({ $content, params }) {
     const data = await $content('blog').sortBy('createdAt','desc').fetch()
     return { data }
-  },
-  methods: {
-    print() {
-      console.log("PRINT")
-    }
   }
 }
 </script>
@@ -47,7 +45,7 @@ export default {
 .container {
   margin: 0 auto;
   padding: 3% 5%;
-  min-height: 100vh;
+  min-height: calc(100vh - 80px);
   height: auto;
   display: flex;
   justify-content: center;

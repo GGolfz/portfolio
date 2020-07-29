@@ -14,6 +14,9 @@ export default {
   components: {
     BlogDetail
   },
+  mounted() {
+    window.scrollTo(0,0);
+  },
   async asyncData ({ $content, params }) {
     const data = await $content('blog', params.slug).fetch()
     const [prev, next] = await $content("blog")
@@ -30,7 +33,7 @@ export default {
 <style>
 .container {
   margin: 0 auto;
-  min-height: 100vh;
+  min-height: calc(100vh - 80px);
   height: auto;
   display: flex;
   justify-content: center;

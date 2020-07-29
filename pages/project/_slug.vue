@@ -11,14 +11,17 @@ export default {
   async asyncData ({ $content, params }) {
     const data = await $content('project', params.slug).fetch()
     return { data }
-  }
+  },
+  mounted() {
+    window.scrollTo(0,0);
+  },
 }
 </script>
 
 <style>
 .container {
   margin: 0 auto;
-  min-height: 100vh;
+  min-height: calc(100vh - 80px);
   height: auto;
   display: flex;
   justify-content: center;
