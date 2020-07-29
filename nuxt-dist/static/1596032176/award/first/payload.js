@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/award/first", (function(a){return {data:[{data:{toc:[],body:{type:"root",children:[]},dir:"\u002Faward",path:"\u002Faward\u002Ffirst",extension:".md",slug:"first",createdAt:a,updatedAt:a}}],fetch:[],mutations:void 0}}("2020-07-29T14:15:15.367Z")));
