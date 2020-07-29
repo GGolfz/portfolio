@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/showcase/first", {data:[{}],fetch:[],mutations:void 0});
