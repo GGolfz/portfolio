@@ -1,15 +1,19 @@
 <template>
   <div :class="dark?'container dark-theme':'container light-theme'">
     <div>
-      Contact Page
+      <Contact :dark="dark"/>
     </div>
   </div>
 </template>
 
 <script>
+import Contact from '../../components/Contact'
 export default {
   props: {
     dark: Boolean
+  },
+  components: {
+    Contact
   },
   mounted() {
     window.scrollTo(0,0);
