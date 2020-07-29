@@ -12,10 +12,10 @@
         </el-col>
         <el-col :span="24" :class="dark?'blog-dark blog-content-author':'blog-light blog-content-author'" style="margin-bottom:2%">
               <el-row style="align-items:center;display:flex">
-                  <el-col :span="2">
+                  <el-col :xs="6" :sm="4" :md="2">
                       <img src="profile.jpg" width="100%" style="border-radius:200px">
                   </el-col>
-                  <el-col :span="22" style="padding-left:2%">
+                  <el-col :xs="18" :sm="20" :md="22" style="padding-left:2%">
                       <el-row>
                           <el-col :span="24">
                             {{data.author}}
