@@ -1,6 +1,6 @@
 ---
 title: My forth Blog Post
-description: Learning how to use @nuxt/content to create a blog Learning how to use Learning how to use 
+description: Learning how to use @nuxt/content to create a blog
 blogimg: group1.png
 alt: my forth blog post
 tag: blog
