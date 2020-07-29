@@ -9,7 +9,10 @@
 export default {
   props: {
     dark: Boolean
-  }
+  },
+  mounted() {
+    window.scrollTo(0,0);
+  },
 }
 </script>
 

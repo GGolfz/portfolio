@@ -15,7 +15,10 @@ export default {
     const data = await $content('project').fetch()
     console.log(data)
     return { data }
-  }
+  },
+  mounted() {
+    window.scrollTo(0,0);
+  },
 }
 </script>
 

@@ -147,10 +147,6 @@ export default {
     prev: Object,
     next: Object
   },
-  mounted() {
-    console.log(this.prev)
-    console.log(this.next)
-  },
   methods: {
     formatTime(time) {
       let date = new Date(time)

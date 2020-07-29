@@ -14,6 +14,9 @@ export default {
   components: {
     BlogDetail
   },
+  mounted() {
+    window.scrollTo(0,0);
+  },
   async asyncData ({ $content, params }) {
     const data = await $content('blog', params.slug).fetch()
     const [prev, next] = await $content("blog")

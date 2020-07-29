@@ -13,6 +13,9 @@ export default {
   props: {
     dark: Boolean
   },
+  mounted() {
+    window.scrollTo(0,0);
+  },
   async asyncData ({ $content, params }) {
     const data = await $content('award', params.slug).fetch()
 

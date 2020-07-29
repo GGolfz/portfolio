@@ -11,7 +11,10 @@ export default {
   async asyncData ({ $content, params }) {
     const data = await $content('project', params.slug).fetch()
     return { data }
-  }
+  },
+  mounted() {
+    window.scrollTo(0,0);
+  },
 }
 </script>
 

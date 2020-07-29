@@ -20,14 +20,12 @@ export default {
   props: {
     dark: Boolean
   },
+  mounted() {
+    window.scrollTo(0,0);
+  },
   async asyncData ({ $content, params }) {
     const data = await $content('blog').sortBy('createdAt','desc').fetch()
     return { data }
-  },
-  methods: {
-    print() {
-      console.log("PRINT")
-    }
   }
 }
 </script>
