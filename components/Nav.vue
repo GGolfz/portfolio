@@ -29,7 +29,7 @@
 export default {
   data() {
     return {
-      menu: ['Home', 'About', 'Blog', 'Award', 'Project', 'Contact'],
+      menu: ['Home', 'About','Blog','Showcase', 'Contact'],
       current: '',
       isHome: false
     }

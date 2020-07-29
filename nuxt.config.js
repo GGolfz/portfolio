@@ -7,6 +7,7 @@ const getRoutes = async () =>{
               for(let j of files){
                   let route = j.split('.')
                   routes.push('/'+i+'/'+route[0])
+                  console.log(routes)
               }
           })
       }
