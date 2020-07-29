@@ -29,7 +29,7 @@
       </section>
       <el-col :span="24" class="about-content divider">
           <el-row class="about-tech">
-              <el-col :xs="24" :sm="24" :md="12">
+              <el-col :xs="24" :sm="24" :md="10">
                   <el-row>
                       <el-col :span="24">
                         <h2 class="about-title">Education</h2>
@@ -49,7 +49,7 @@
                       </el-col>
                   </el-row>
               </el-col>
-              <el-col :xs="24" :sm="24" :md="12" class="about-tech-skill">
+              <el-col :xs="24" :sm="24" :md="14" class="about-tech-skill">
                   <el-row>
                       <el-col :span="24">
                         <h2 class="about-title">Technology Skills</h2>
@@ -60,7 +60,7 @@
                                     <div class="about-title">
                                     😍 Proficient with :
                                     </div>
-                                    <li v-for="(data,index) in proficient" :key="index">
+                                    <li v-for="(data,index) in proficient" :key="index" class="about-skill-item-list">
                                         {{data}}
                                     </li>
                                 </el-col>
@@ -68,7 +68,7 @@
                                     <div class="about-title">
                                     ⭐️ Familiar with :
                                     </div>
-                                    <li v-for="(data,index) in familiar" :key="index">
+                                    <li v-for="(data,index) in familiar" :key="index" class="about-skill-item-list">
                                         {{data}}
                                     </li>
                                 </el-col>
@@ -80,7 +80,7 @@
                                     <div class="about-title">
                                     🔥 Experienced with :
                                     </div>
-                                    <li v-for="(data,index) in experience" :key="index">
+                                    <li v-for="(data,index) in experience" :key="index" class="about-skill-item-list">
                                         {{data}}
                                     </li>
                                 </el-col>
@@ -88,7 +88,7 @@
                                     <div class="about-title">
                                     🤩 Other interests :
                                     </div>
-                                    <li v-for="(data,index) in interests" :key="index">
+                                    <li v-for="(data,index) in interests" :key="index" class="about-skill-item-list">
                                         {{data}}
                                     </li>
                                 </el-col>
@@ -152,6 +152,9 @@ export default {
     .about-quote {
         font-size: 0.95em;
     }
+    .about-skill-item-list {
+        padding-left: 5%;
+    }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .about-name {
@@ -175,6 +178,9 @@ export default {
     .divider {
         padding-top: 2%;
         border-top: 1px solid #7b7b7b;
+    }
+    .about-skill-item-list {
+        padding-left: 8%;
     }
 
 }
@@ -200,6 +206,9 @@ export default {
     .divider {
         padding-top: 2%;
         border-top: 1px solid #7b7b7b;
+    }
+    .about-skill-item-list {
+        padding-left: 10%;
     }
 }   
     .about-skill-item{
