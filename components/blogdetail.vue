@@ -68,20 +68,20 @@
     </el-row>
     <el-row
       style="margin-top: 1%;display: flex;
-    flex-wrap: wrap;"
+    flex-wrap: nowrap;"
       :class="
         dark
           ? 'dark-content blog-detail-content'
           : 'light-content blog-detail-content'
       "
     >
-      <el-col v-if="data.toc.length" :xs="24" :sm="8" :md="6">
+      <el-col v-if="data.toc.length" :xs="24" :sm="8" :md="6" class="toc-menu">
         <el-menu class="toc-sticky"
     :text-color="dark?'#bdbdbd':'#4c4c4c'"
     :background-color="dark?'#0a0a0a':'#efefef'"
     style="border-right:none">
             <el-menu-item class="toc-title">
-              <span :style="dark?'color:#c99d78;font-weight:600;':'color:##d2aa88;font-weight:600'">Table of contents</span>
+              <span :style="dark?'color:#c99d78;font-weight:600;':'color:#d2aa88;font-weight:600'">Table of contents</span>
             </el-menu-item>
             <el-menu-item v-for="header in data.toc" :key="header.id" class="toc-item">
               <a @click="gotoHash(header.id)">{{ header.text }}</a>
@@ -89,9 +89,9 @@
         </el-menu>
       </el-col>
       <el-col :xs="24" :sm="16" :md="18" class="markdown-content">
-        <article>
+        <main>
           <nuxt-content :document="data" />
-        </article>
+        </main>
       </el-col>
     </el-row>
     <el-row 
@@ -270,9 +270,9 @@ export default {
     height: fit-content !important;
     padding: 3% 0% !important;
     font-size: 0.9em !important;
-  }
-  .markdown-content {
-    padding: 0% 5% !important;
+  }  
+  .toc-menu {
+    padding-right:5%;
   }
 }
 @media only screen and (min-width: 1025px) {
@@ -299,8 +299,8 @@ export default {
     padding: 3% 0% !important;
     font-size: 1.2em !important;
   }
-  .markdown-content {
-    padding: 0% 5% !important;
+  .toc-menu {
+    padding-right:3%;
   }
 }
   .blog-detail-content {
