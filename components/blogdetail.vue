@@ -239,7 +239,7 @@ export default {
   p {
     font-size: 1.2em;
   }
-  .toc-sticky {
+  .toc-menu {
     display: none;
   }
   .blog-nav-img {
