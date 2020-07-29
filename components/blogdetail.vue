@@ -1,167 +1,423 @@
 <template>
-    <div class="blog-detail">
-      <el-row :class="dark?'dark-content blog-detail-header':'light-content blog-detail-header'">
-        <el-col :span="24" :class="dark?'blog-dark blog-content-tag':'blog-light blog-content-tag'">
-            <i class="far fa-bookmark" />
-              <span style="margin-left:2px">
-              {{data.tag}}
-              </span>        
-        </el-col>
-        <el-col :span="24" style="padding-bottom:1%;border-bottom:#7b7b7b solid 1px">
-            <h1 :class="dark?'dark-content blog-content-header':'light-content blog-content-header'">{{ data.title }}</h1>
-        </el-col>
-        <el-col :span="24" :class="dark?'blog-dark blog-content-author':'blog-light blog-content-author'" style="margin-bottom:2%">
-              <el-row style="align-items:center;display:flex">
-                  <el-col :span="2">
-                      <img src="profile.jpg" width="100%" style="border-radius:200px">
-                  </el-col>
-                  <el-col :span="22" style="padding-left:2%">
-                      <el-row>
-                          <el-col :span="24">
-                            {{data.author}}
-                          </el-col>
-                          <el-col :span="24" :class="dark?'blog-dark blog-time':'blog-light blog-time'">
-                            {{formatTime(data.createdAt)}} · {{data.readTime}}
-                          </el-col>
-                      </el-row>
-                  </el-col>
-              </el-row>
+  <div class="blog-detail">
+    <el-row
+      :class="
+        dark
+          ? 'dark-content blog-detail-header'
+          : 'light-content blog-detail-header'
+      "
+    >
+      <el-col
+        :span="24"
+        :class="
+          dark ? 'blog-dark blog-content-tag' : 'blog-light blog-content-tag'
+        "
+      >
+        <i class="far fa-bookmark" />
+        <span style="margin-left: 2px;">
+          {{ data.tag }}
+        </span>
+      </el-col>
+      <el-col
+        :span="24"
+        style="padding-bottom: 1%; border-bottom: #7b7b7b solid 1px;"
+      >
+        <h1
+          :class="
+            dark
+              ? 'dark-content blog-content-header'
+              : 'light-content blog-content-header'
+          "
+        >
+          {{ data.title }}
+        </h1>
+      </el-col>
+      <el-col
+        :span="24"
+        :class="
+          dark
+            ? 'blog-dark blog-content-author'
+            : 'blog-light blog-content-author'
+        "
+        style="margin-bottom: 2%;"
+      >
+        <el-row style="align-items: center; display: flex;">
+          <el-col :xs="6" :sm="4" :md="2">
+            <img src="profile.jpg" width="100%" style="border-radius: 200px;" />
           </el-col>
-      </el-row>
-      <el-row class="blog-detail-image-header">
-          <el-col :span="24">
-              <img :src="data.blogimg" width="100%" alt="blog-img">
+          <el-col :xs="18" :sm="20" :md="22" style="padding-left: 2%;">
+            <el-row>
+              <el-col :span="24">
+                {{ data.author }}
+              </el-col>
+              <el-col
+                :span="24"
+                :class="dark ? 'blog-dark blog-time' : 'blog-light blog-time'"
+              >
+                {{ formatTime(data.createdAt) }} · {{ data.readTime }}
+              </el-col>
+            </el-row>
           </el-col>
-      </el-row>
-      <article style="margin-top:1%">
-        <nuxt-content :class="dark?'dark-content blog-detail-content':'light-content blog-detail-content'" :document="data" />
-      </article>
-    </div>
+        </el-row>
+      </el-col>
+    </el-row>
+    <el-row class="blog-detail-image-header">
+      <el-col :span="24">
+        <img :src="data.blogimg" width="100%" alt="blog-img" />
+      </el-col>
+    </el-row>
+    <el-row
+      style="margin-top: 1%;display: flex;
+    flex-wrap: wrap;"
+      :class="
+        dark
+          ? 'dark-content blog-detail-content'
+          : 'light-content blog-detail-content'
+      "
+    >
+      <el-col v-if="data.toc.length" :xs="24" :sm="8" :md="6">
+        <el-menu class="toc-sticky"
+    :text-color="dark?'#bdbdbd':'#4c4c4c'"
+    :background-color="dark?'#0a0a0a':'#efefef'"
+    style="border-right:none">
+            <el-menu-item class="toc-title">
+              <span :style="dark?'color:#c99d78;font-weight:600;':'color:##d2aa88;font-weight:600'">Table of contents</span>
+            </el-menu-item>
+            <el-menu-item v-for="header in data.toc" :key="header.id" class="toc-item">
+              <a @click="gotoHash(header.id)">{{ header.text }}</a>
+            </el-menu-item>
+        </el-menu>
+      </el-col>
+      <el-col :xs="24" :sm="16" :md="18" style="padding:0% 5%">
+        <article>
+          <nuxt-content :document="data" />
+        </article>
+      </el-col>
+    </el-row>
+    <el-row 
+      :class="
+        dark
+          ? 'dark-content blog-detail-content blog-nav'
+          : 'light-content blog-detail-content blog-nav'">
+      <el-col :span="12" class="blog-next-nav">
+        <div v-if="next">
+          <a :href="`/portfolio/blog/${next.slug}`">
+            <div class="blog-nav-sub">
+              <i class="fa fa-arrow-left" aria-hidden="true" style="margin-right:2px" /> บทความถัดไป
+            </div>
+            <div class="blog-nav-title">
+            {{next.title}}
+            </div>
+            <div class="blog-nav-img">
+              <img :src="next.blogimg" width="60%">
+            </div>
+          </a>
+        </div>
+        <div v-else>
+          &nbsp;
+        </div>
+      </el-col>
+      <el-col :span="12" class="blog-prev-nav">
+        <div v-if="prev">
+          <a :href="`/portfolio/blog/${prev.slug}`">
+            <div class="blog-nav-sub">
+              บทความก่อนหน้า <i class="fa fa-arrow-right" aria-hidden="true" style="margin-left:2px"/>
+            </div>
+            <div class="blog-nav-title">
+            {{prev.title}}
+            </div>
+            <div class="blog-nav-img">
+              <img :src="prev.blogimg" width="60%">
+            </div>
+          </a>
+        </div>
+        <div v-else>
+          &nbsp;
+        </div>
+      </el-col>
+    </el-row>
+  </div>
 </template>
 
 <script>
 export default {
-    props: {
-        data:Object,
-        dark:Boolean
+  props: {
+    data: Object,
+    dark: Boolean,
+    prev: Object,
+    next: Object
+  },
+  mounted() {
+    console.log(this.prev)
+    console.log(this.next)
+  },
+  methods: {
+    formatTime(time) {
+      let date = new Date(time)
+      let weekday = date.getDay()
+      switch (weekday) {
+        case 0:
+          weekday = 'Sun'
+          break
+        case 1:
+          weekday = 'Mon'
+          break
+        case 2:
+          weekday = 'Tue'
+          break
+        case 3:
+          weekday = 'Wed'
+          break
+        case 4:
+          weekday = 'Thu'
+          break
+        case 5:
+          weekday = 'Fri'
+          break
+        case 6:
+          weekday = 'Sat'
+          break
+      }
+      let day = date.getDate()
+      let month = date.getMonth()
+      switch (month) {
+        case 0:
+          month = 'Jan'
+          break
+        case 1:
+          month = 'Feb'
+          break
+        case 2:
+          month = 'Mar'
+          break
+        case 3:
+          month = 'Apr'
+          break
+        case 4:
+          month = 'May'
+          break
+        case 5:
+          month = 'Jun'
+          break
+        case 6:
+          month = 'Jul'
+          break
+        case 7:
+          month = 'Aug'
+          break
+        case 8:
+          month = 'Sep'
+          break
+        case 9:
+          month = 'Oct'
+          break
+        case 10:
+          month = 'Nov'
+          break
+        case 11:
+          month = 'Dec'
+          break
+      }
+      let year = date.getFullYear()
+      return weekday + ' ' + day + ' ' + month + ' ' + year
     },
-    methods: {
-        formatTime(time){
-            let date = new Date(time)
-            let weekday = date.getDay()
-            switch(weekday){
-                case 0: weekday="Sun";break;
-                case 1: weekday="Mon";break;
-                case 2: weekday="Tue";break;
-                case 3: weekday="Wed";break;
-                case 4: weekday="Thu";break;
-                case 5: weekday="Fri";break;
-                case 6: weekday="Sat";break;
-            }
-            let day = date.getDate()
-            let month = date.getMonth()
-            switch(month){
-                case 0: month="Jan";break;
-                case 1: month="Feb";break;
-                case 2: month="Mar";break;
-                case 3: month="Apr";break;
-                case 4: month="May";break;
-                case 5: month="Jun";break;
-                case 6: month="Jul";break;
-                case 7: month="Aug";break;
-                case 8: month="Sep";break;
-                case 9: month="Oct";break;
-                case 10: month="Nov";break;
-                case 11: month="Dec";break;
-            }
-            let year = date.getFullYear()
-            return weekday+" "+day+" "+month+" "+year
-        }
-    }
+    gotoHash(hash) {
+      window.scrollTo(
+        0,
+        document.getElementById(hash).getBoundingClientRect().top +
+          window.scrollY - 80
+      )
+    },
+  },
 }
 </script>
 
 <style>
-.blog-detail{
-    width:100%;
-    text-align: left;
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+  p {
+    font-size: 1.2em;
+  }
+  .toc-sticky {
+    display: none;
+  }
+  .blog-nav-img {
+    display:none;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  h1 {
+    font-size: 2.8em;
+  }
+  h2 {
+    font-size: 2.4em;
+  }
+  p {
+    font-size: 1.1em;
+  }
+  .toc-sticky {
+    position: sticky;
+    top: 85px;
+    text-align: center;
+  }
+  .toc-title {
+    font-size: 1.1em !important;
+  }
+  .toc-item {
+    line-height: 30px !important;
+    height: fit-content !important;
+    padding: 3% 0% !important;
+    font-size: 0.9em !important;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  h1 {
+    font-size: 3em;
+  }
+  h2 {
+    font-size: 2.5em;
+  }
+  p {
+    font-size: 1.3em;
+  }
+  .toc-sticky {
+    position: sticky;
+    top: 85px;
+    text-align: center;
+  }
+  .toc-title {
+    font-size: 1.4em !important;
+  }
+  .toc-item {
+    line-height: 30px !important;
+    height: fit-content !important;
+    padding: 3% 0% !important;
+    font-size: 1.2em !important;
+  }
+}
+.blog-detail {
+  width: 100%;
+  text-align: left;
 }
 .blog-content-tag {
-    font-weight: 600;
-    font-family: 'Titillium Web', sans-serif;
-    font-size: 1.3em;
-    margin-left: 5px;
-    margin-top: 5px;
+  font-weight: 600;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 1.3em;
+  margin-left: 5px;
+  margin-top: 5px;
 }
 .blog-dark.blog-content-tag {
-    color: #c99d78;
+  color: #c99d78;
 }
 .blog-light.blog-content-tag {
-    color: #d2aa88;
+  color: #d2aa88;
 }
 .blog-content-author {
-    font-weight: 400;
-    font-family: 'Titillium Web', sans-serif;
-    font-size: 1.1em;
-    margin-top: 3%;
+  font-weight: 400;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 1.1em;
+  margin-top: 3%;
 }
 .blog-dark.blog-content-author {
-    color: #FFFFFFBF;
+  color: #ffffffbf;
 }
 .blog-light.blog-content-author {
-    color: #4C4C4CBF;
+  color: #4c4c4cbf;
 }
-.blog-detail-header{
-    padding: 0% 15%
+.blog-detail-header {
+  padding: 0% 15%;
 }
-h1.dark-content.blog-content-header{
-    color: #f8f8f8;
-    font-size: 3em;
+.blog-nav {
+  margin-top: 2%;
+}
+.blog-next-nav{
+  text-align: left;
+}
+.blog-prev-nav{
+  text-align: right;
+}
+a .blog-nav-title {
+  font-size: 1.4em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+a .blog-nav-sub {
+  font-size: 1.2em;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 400;
+}
+.blog-nav-sub{
+  margin-bottom: 1%;
+}
+.blog-nav-title{
+  margin-bottom: 2%;
+}
+.dark-content a .blog-nav-sub{
+  color:#bdbdbd !important;
+}
+.dark-content a .blog-nav-title{
+  color:#d2aa88 !important;
+}
+.light-content a .blog-nav-sub{
+  color:#606060 !important;
+}
+.light-content a .blog-nav-title{
+  color:#c99d78 !important;
+}
+h1.dark-content.blog-content-header {
+  color: #f8f8f8;
+  font-size: 3em;
+}
+h1.light-content.blog-content-header {
+  color: #2f2f2f;
+  font-size: 3em;
 }
 .blog-detail-image-header {
-    padding: 0% 5%
+  padding: 0% 5%;
 }
-.blog-detail-content{
-    padding: 0% 15%
+.blog-detail-content {
+  padding: 0% 5%;
 }
-h1{
-  font-size:2.5em;
+h1 {
   font-weight: 600;
   font-family: 'Titillium Web', sans-serif;
 }
 .dark-content h1 {
-  color: #bdbdbd;
+  color: #f8f8f8;
 }
 .light-content h1 {
-  color: #4c4c4c
+  color: #2f2f2f;
 }
-h2{
-  font-size:1.8em;
+h2 {
   font-weight: 600;
   font-family: 'Titillium Web', sans-serif;
 }
 .dark-content h2 {
-  color: #bdbdbd
+  color: #dcdcdc;
 }
 .light-content h2 {
-  color: #4c4c4c
+  color: #4c4c4c;
 }
-p{
-  font-size:1.2em;
+p {
   font-weight: 400;
   font-family: 'Montserrat', sans-serif;
 }
 .dark-content p {
-  color: #dcdcdc
+  color: #bdbdbd;
 }
 .light-content p {
-  color: #606060
+  color: #606060;
 }
-blockquote{
+blockquote {
   font-weight: 400;
   font-family: 'Montserrat', sans-serif;
   margin-left: 0;
-  padding: .4rem .8rem;
+  padding: 0.4em 0.8em;
 }
 .dark-content blockquote {
   border-left: 0.2em solid #dcdcdc;
@@ -172,17 +428,19 @@ blockquote{
   color: #606060;
 }
 .dark-content pre.language-text.line-numbers {
-    background: #0A0A0A;
+  background: #0a0a0a;
 }
 .light-content pre.language-text.line-numbers {
-    background: #f5f2f0;
+  background: #f5f2f0;
 }
 .dark-content code {
-    color: #F8F8F8;
-    text-shadow:none;
+  color: #f8f8f8;
+  text-shadow: none;
+  font-size: 1.2em;
 }
 .light-content code {
-    color: #2F2F2F;
-    text-shadow:none;
+  color: #2f2f2f;
+  text-shadow: none;
+  font-size: 1.2em;
 }
 </style>

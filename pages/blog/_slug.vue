@@ -1,6 +1,6 @@
 <template>
   <div :class="dark?'container dark-theme':'container light-theme'">
-    <BlogDetail :data="data" :dark="dark"/>
+    <BlogDetail :data="data" :dark="dark" :prev="prev" :next="next" />
   </div>
 </template>
 
@@ -16,7 +16,12 @@ export default {
   },
   async asyncData ({ $content, params }) {
     const data = await $content('blog', params.slug).fetch()
-    return { data }
+    const [prev, next] = await $content("blog")
+      .only(["title", "slug","blogimg"])
+      .sortBy("createdAt", "asc")
+      .surround(params.slug)
+      .fetch();
+    return { data, prev, next}
   },
   
 }
