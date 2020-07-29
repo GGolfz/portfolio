@@ -4,7 +4,7 @@
     <el-row>
       <el-col :span="24">
         <span class="contact-card-title">{{ data.name }}</span>
-        <i :class="`fab fa-${data.icon}`" :style="`color:${data.color}`"></i>
+        <i :class="`fab fa-${data.icon}`" :style="dark?`color:${data.darkcolor}`:`color:${data.lightcolor}`"></i>
       </el-col>
       <el-col :span="24">
         <span>{{ data.value }}</span>
@@ -18,6 +18,7 @@
 export default {
   props: {
     data: Object,
+    dark: Boolean
   },
 }
 </script>
@@ -50,6 +51,7 @@ export default {
     font-family: 'Titillium Web', sans-serif;
     opacity: 0.75;
     transition: opacity 0.3s;
+    border-radius: 10px;
 }
 .contact-card:hover{
     opacity: 1;
@@ -64,7 +66,7 @@ export default {
     background: #F7F7F7;
     border: 1px solid #EBEEF5;
     color:#303030;
-    box-shadow: 0 2px 12px 0 rgba(0,0,0,.3);
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,.7);
 }
 .contact-card-title {
     font-weight: 600;
