@@ -1,6 +1,7 @@
 <template>
   <div :class="dark?'container dark-theme':'container light-theme'">
     <div class="banner">
+      HOME PAGE
     </div>
   </div>
 </template>

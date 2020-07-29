@@ -88,7 +88,7 @@
             </el-menu-item>
         </el-menu>
       </el-col>
-      <el-col :xs="24" :sm="16" :md="18" style="padding:0% 5%">
+      <el-col :xs="24" :sm="16" :md="18" class="markdown-content">
         <article>
           <nuxt-content :document="data" />
         </article>
@@ -245,9 +245,6 @@ export default {
   .blog-nav-img {
     display: none;
   }
-  .blog-detail-content {
-    padding: 0% 10% !important;
-  }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   h1 {
@@ -274,6 +271,9 @@ export default {
     padding: 3% 0% !important;
     font-size: 0.9em !important;
   }
+  .markdown-content {
+    padding: 0% 5% !important;
+  }
 }
 @media only screen and (min-width: 1025px) {
   h1 {
@@ -299,7 +299,13 @@ export default {
     padding: 3% 0% !important;
     font-size: 1.2em !important;
   }
+  .markdown-content {
+    padding: 0% 5% !important;
+  }
 }
+  .blog-detail-content {
+    padding: 0% 5% !important;
+  }
 .blog-detail {
   width: 100%;
   text-align: left;
@@ -378,9 +384,6 @@ h1.light-content.blog-content-header {
   font-size: 3em;
 }
 .blog-detail-image-header {
-  padding: 0% 5%;
-}
-.blog-detail-content {
   padding: 0% 5%;
 }
 h1 {
