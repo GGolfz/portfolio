@@ -24,7 +24,7 @@
                 I am interested in Competitive Programming, Website Development both Front-end and Back-end, Application Development on a portable device in terms of native and cross-platform including Data Science, Cybersecurity, Game Development, and Artificial Intelligence.
               </p>
               <p class="about-me">  
-                In addition, I am also interested in System Analysis and Design because I believe that an efficient system and well design in terms of the user interface (UI) and user experience (UX) will make people's lives better.
+                In addition, I am also interested in System Analysis and Design because I believe that an efficient system and well design in terms of the user interface (UI) and user experience (UX) will make people's lives better. And I am interested in video editing, photography, photo editing, and using technology tools such as Microsoft Power Automate to make my life easier.
               </p>
       </section>
       <el-col :span="24" class="about-content divider">
