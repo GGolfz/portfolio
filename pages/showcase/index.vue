@@ -17,7 +17,7 @@
           <el-col :span="24">
             <el-row class="grid-test">
               <el-col :span="8" v-for="(el, index) in Array.from(award).splice(showaward,size)" :key="index" :data-index="index" style="text-align:center;width:100%">
-                <ShowcaseItem />
+                <ShowcaseItem :data="el" />
               </el-col>
               <div v-if="showaward !=0" class="page-naviga prev" @click="prevaward"  icon="el-icon-arrow-left" circle>
                 <i aria-hidden="true" class=" fa fa-chevron-left"/>
@@ -37,7 +37,7 @@
           <el-col :span="24">
             <el-row class="grid-test">
               <el-col :span="8" v-for="(el, index) in Array.from(project).splice(showproject,size)" :key="index" :data-index="index" style="text-align:center;width:100%">
-                <ShowcaseItem />
+                <ShowcaseItem :data="el"/>
               </el-col>
               <div v-if="showproject !=0" class="page-naviga prev" @click="prevproject" circle>
                 <i aria-hidden="true" class=" fa fa-chevron-left"/>
@@ -121,7 +121,7 @@ export default {
     const data = await $content('showcase').sortBy('date', 'desc').fetch()
     const award = data.filter((el) => el.tag === 'award').splice(0,6)
     const project = data.filter((el) => el.tag === 'project').splice(0,6)
-    return { award, project:[...project,...project,...project,...project] }
+    return { award, project }
   },
 }
 </script>
@@ -218,7 +218,7 @@ export default {
   display:grid;
   grid-auto-flow:column;
   overflow:auto;
-  grid-gap:1.6rem;
+  grid-column-gap: 1.6rem;
 }
 .grid-test::before{
   content:none;

@@ -1,20 +1,22 @@
 <template>
   <el-row style="width:100%">
       <el-col :span="24">
-          <img src="group1.png" width="100%">
+          <img :src="data.img" width="100%">
       </el-col>
       <el-col :span="24" class="showcase-item-title" style="text-align:start">
-          Title หัวข้อ
+          {{data.title}}
       </el-col>
       <el-col :span="24" class="showcase-item-description" style="text-align:start">
-          Description รายละเอียดDescription รายละเอียดDescription รายละเอียด
+          {{data.description}}
       </el-col>
   </el-row>
 </template>
 
 <script>
 export default {
-
+    props: {
+        data: Object
+    }
 }
 </script>
 
