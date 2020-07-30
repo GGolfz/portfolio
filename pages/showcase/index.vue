@@ -10,7 +10,7 @@
             <div>
               Award
             </div>
-            <div style="padding-right: 5%;width:max-content" @click="goto('award')">
+            <div @click="goto('award')">
               <span class="view-button">View All</span>
             </div>
           </el-col>
@@ -30,7 +30,7 @@
         </el-row>
         <el-row>
           <el-col :span="24" class="showcase-subtitle"><div>Project</div>
-            <div style="padding-right: 5%;width:max-content" @click="goto('project')">
+            <div @click="goto('project')">
               <span class="view-button">View All</span>
             </div>
             </el-col>
