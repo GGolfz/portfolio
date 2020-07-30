@@ -1,6 +1,7 @@
 <template>
   <div :class="dark?'container dark-theme':'container light-theme'">
     <!-- <ShowcaseDetail :data="data" :dark="dark" :prev="prev" :next="next" /> -->
+    {{data.slug}}
   </div>
 </template>
 

@@ -14,8 +14,8 @@
               <span class="view-button">View All</span>
             </div>
           </el-col>
-          <el-col :span="24">
-            <el-row class="grid-test">
+          <el-col :span="24" class="showcase-desktop">
+            <el-row class="showcase-grid">
               <el-col :span="8" v-for="(el, index) in Array.from(award).splice(showaward,size)" :key="index" :data-index="index" style="text-align:center;width:100%">
                 <ShowcaseItem :data="el" />
               </el-col>
@@ -27,6 +27,9 @@
               </div>
             </el-row>
           </el-col>
+          <el-col :span="24" class="showcase-mobile" v-for="(el,index) in Array.from(award).splice(0,3)" :key="index">
+            <ShowcaseMobile :data="el" />
+          </el-col>
         </el-row>
         <el-row>
           <el-col :span="24" class="showcase-subtitle"><div>Project</div>
@@ -34,8 +37,8 @@
               <span class="view-button">View All</span>
             </div>
             </el-col>
-          <el-col :span="24">
-            <el-row class="grid-test">
+          <el-col :span="24" class="showcase-desktop">
+            <el-row class="showcase-grid">
               <el-col :span="8" v-for="(el, index) in Array.from(project).splice(showproject,size)" :key="index" :data-index="index" style="text-align:center;width:100%">
                 <ShowcaseItem :data="el"/>
               </el-col>
@@ -47,6 +50,9 @@
               </div>
             </el-row>
           </el-col>
+          <el-col :span="24" class="showcase-mobile" v-for="(el,index) in Array.from(project).splice(0,3)" :key="index">
+            <ShowcaseMobile :data="el" />
+          </el-col>
         </el-row>
       </el-col>
     </el-row>
@@ -55,6 +61,7 @@
 
 <script>
 import ShowcaseItem from '../../components/showcaseitem'
+import ShowcaseMobile from '../../components/showcasemobile'
 export default {
   data() {
     return {
@@ -67,7 +74,8 @@ export default {
     dark: Boolean,
   },
   components: {
-    ShowcaseItem
+    ShowcaseItem,
+    ShowcaseMobile
   },
   methods: {
     prevaward() {
@@ -91,17 +99,17 @@ export default {
       }
     },
     changeSize() {
-      if(this.showaward = this.award.length-this.size){
+      if(this.award.length > this.size && this.showaward == this.award.length-this.size){
         this.showaward +=1
       }
-      if(this.showproject = this.project.length-this.size){
+      if(this.project.length > this.size && this.showproject == this.project.length-this.size){
         this.showproject +=1
       }
       this.size = window.matchMedia("(min-width: 768px) and (max-width: 1024px)").matches?2:3
-      if(this.showaward >= this.award.length-this.size){
+      if(this.award.length > this.size && this.showaward >= this.award.length-this.size){
         this.showaward = this.award.length-this.size
       }
-      if(this.showproject >= this.project.length-this.size){
+      if(this.project.length > this.size && this.showproject >= this.project.length-this.size){
         this.showproject = this.project.length-this.size
       }
     },
@@ -144,8 +152,36 @@ export default {
   background: #fcfcfc;
   color: #606060;
 }
+.showcase-mobile {
+  padding: 3% 0%;
+}
+@media only screen and (max-width: 767px) {
+  .showcase-desktop {
+    display:none
+  }
+  .showcase-mobile {
+    display: block;
+  }
+  .showcase {
+    width:100%;
+    padding: 2% 5%;
+  }
+  .showcase-title {
+      font-size: 2.5em;
+      font-family: 'Titillium Web', sans-serif;
+      padding: 0% 0% 1% 0%;
+  }
+  .showcase-subtitle {
+      font-size: 1.7em;
+      font-family: 'Titillium Web', sans-serif;
+      padding: 1% 0%;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+  }
+}
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .grid-test{
+  .showcase-grid{
     grid-auto-columns: calc((100% - (2 - 1) * 1.6rem)/2);
   }
   .showcase {
@@ -164,13 +200,18 @@ export default {
       text-align: left;
       display: flex;
       justify-content: space-between;
-
+  }
+  .showcase-desktop {
+    display: block
+  }
+  .showcase-mobile {
+    display: none;
   }
 
 }
 @media only screen and (min-width: 1025px) {
-  .grid-test{
-    grid-auto-columns: calc((100% - (3 - 1) * 1.6rem)/3);
+  .showcase-grid{
+    grid-auto-columns: calc((100% - (3 - 1) * 3rem)/3);
   }
   .showcase {
     width:100%;
@@ -188,9 +229,13 @@ export default {
       text-align: left;
       display: flex;
       justify-content: space-between;
-
   }
-
+  .showcase-desktop {
+    display:block
+  }
+  .showcase-mobile {
+    display: none;
+  }
 }
 .view-button {
   padding-bottom: 3px;
@@ -214,16 +259,16 @@ export default {
   border-bottom: 1px solid #2a2a2a;
   color: #2a2a2a;
 }
-.grid-test {
+.showcase-grid {
   display:grid;
   grid-auto-flow:column;
   overflow:auto;
-  grid-column-gap: 1.6rem;
+  grid-column-gap: 3rem;
 }
-.grid-test::before{
+.showcase-grid::before{
   content:none;
 }
-.grid-test::-webkit-scrollbar {
+.showcase-grid::-webkit-scrollbar {
   display:none;
   width: 0;
 }

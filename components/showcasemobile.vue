@@ -1,14 +1,18 @@
 <template>
   <div style="width:100%;cursor:pointer" @click="goto(data.slug)">
   <el-row>
-      <el-col :span="24">
+      <el-col :span="12" style="padding:2% 5% 2% 0%">
           <img :src="data.img" width="100%">
       </el-col>
-      <el-col :span="24" class="showcase-item-title" style="text-align:start">
+      <el-col :span="12" style="text-align:start">
+          <el-row>
+          <el-col :span="24" class="showcase-item-mobile-title">
           {{data.title}}
-      </el-col>
-      <el-col :span="24" class="showcase-item-description" style="text-align:start">
+          </el-col>
+          <el-col :span="24"  class="showcase-item-mobile-description">
           {{data.description}}
+          </el-col>
+          </el-row>
       </el-col>
   </el-row>
   </div>
@@ -29,14 +33,14 @@ export default {
 </script>
 
 <style>
-.showcase-item-title {
+.showcase-item-mobile-title {
     padding: 2% 0%;
-    font-size: 1.8em;
+    font-size: 1.5em;
     font-weight: 600;
     font-family: 'Titillium Web', sans-serif;
 }
-.showcase-item-description {
-    font-size: 1.2em;
+.showcase-item-mobile-description {
+    font-size: 0.8em;
     font-weight: 400;
     font-family: 'Montserrat', sans-serif;
 }
