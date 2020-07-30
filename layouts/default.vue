@@ -30,9 +30,6 @@ export default {
     return {
       val: true
     }
-  },
-  mounted() {
-    console.log(this.$content)
   }
 }
 </script>
@@ -50,9 +47,8 @@ export default {
     display: flex;
   }
   .mobile {
-    display: none;
+    display: none !important;
   }
-  
 }
 
 html {
