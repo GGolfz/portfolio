@@ -42,6 +42,12 @@
                           Current GPAX : 3.88
                           </div>
                           <div class="about-edu-item">
+                          <strong class="about-title">Ramkhamhaeng University</strong> <br/>
+                          Studying Bachelor's degree (4<sup>th</sup>&nbsp;year) of 
+                          Business Administration (Management), Faculty of Business Administration.<br/>
+                          Current GPAX : 2.55
+                          </div>
+                          <div class="about-edu-item">
                           <strong class="about-title">Wat Raja O Ros School</strong> <br/>
                           Studying Science - Mathematics Program. <br/>
                           GPAX : 3.97
@@ -221,7 +227,6 @@ export default {
     }
     .about-quote {
         font-family: 'Montserrat', sans-serif;
-        color:#f8f8f8
     }
     .about-name {
         font-family: 'Titillium Web', sans-serif;
@@ -242,6 +247,12 @@ export default {
 .light-content blockquote.about-me {
   border-left: 0.2em solid #606060;
   color: #606060;
+}
+.dark-content .about-quote{
+  color:#f8f8f8;
+}
+.light-content .about-quote{
+  color: #2f2f2f;
 }
 .dark-content .about-title {
   color: #CBB7A6;

@@ -1,10 +1,10 @@
 ---
 title: My first award
 description: it is my first award
-blogimg: group1.png
+img: group1.png
 alt: My first award
 tag: award
 date: 22/08/2563
 ---
 
-## Show Case
+นี่คือผลงานแรกของผมนะครับ
