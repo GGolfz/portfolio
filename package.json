@@ -1,8 +1,9 @@
 {
   "homepage": "https://ggolfz.github.io/portfolio",
-  "name": "GGolfz",
+  "name": "ggolfz",
   "version": "1.0.0",
   "private": true,
+  "description": "GGolfz's portfolio",
   "scripts": {
     "predeploy": "npm run build && npm run export",
     "dev": "nuxt",

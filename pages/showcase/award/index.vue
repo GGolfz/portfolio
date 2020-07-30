@@ -31,6 +31,18 @@ export default {
   },
   methods: {
   },
+  head() {
+    return {
+      title: "GGolfz's Award",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "GGolfz's Award"
+        },
+      ],
+    };
+  },
   mounted() {
     window.scrollTo(0, 0);
   },

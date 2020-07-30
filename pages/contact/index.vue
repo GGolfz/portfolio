@@ -18,6 +18,18 @@ export default {
   mounted() {
     window.scrollTo(0,0);
   },
+  head() {
+    return {
+      title: "GGolfz's Contact",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "GGolfz's Contact"
+        },
+      ],
+    };
+  },
 }
 </script>
 

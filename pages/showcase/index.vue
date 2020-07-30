@@ -73,6 +73,18 @@ export default {
   props: {
     dark: Boolean,
   },
+  head() {
+    return {
+      title: "GGolfz's Showcase",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "GGolfz's Showcase"
+        },
+      ],
+    };
+  },
   components: {
     ShowcaseItem,
     ShowcaseMobile
