@@ -40,4 +40,16 @@ export default {
     font-weight: 400;
     font-family: 'Montserrat', sans-serif;
 }
+.dark-theme .showcase-item-title{
+    color: #bdbdbd;
+}
+.dark-theme .showcase-item-description{
+    color: #dcdcdc;
+}
+.light-theme .showcase-item-title{
+    color: #4c4c4c;
+}
+.light-theme .showcase-item-description{
+    color: #606060;
+}
 </style>

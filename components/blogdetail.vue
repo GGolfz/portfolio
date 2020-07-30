@@ -257,10 +257,10 @@ export default {
     font-size: 2.8em;
   }
   h2 {
-    font-size: 2.4em;
+    font-size: 2.6em;
   }
   p {
-    font-size: 1.1em;
+    font-size: 1.4em;
   }
   .toc-sticky {
     position: sticky;
@@ -317,9 +317,12 @@ export default {
   .toc-menu {
     padding-right:3%;
   }
-.blog-detail-header {
-  padding: 0% 15%;
-}
+  .blog-detail-header {
+    padding: 0% 15%;
+  }
+  .blog-nav-img img{
+    width:50%;
+  }
 }
   .blog-detail-content {
     padding: 0% 5% !important;

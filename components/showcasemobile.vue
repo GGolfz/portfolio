@@ -44,4 +44,16 @@ export default {
     font-weight: 400;
     font-family: 'Montserrat', sans-serif;
 }
+.dark-theme .showcase-item-mobile-title{
+    color: #bdbdbd;
+}
+.dark-theme .showcase-item-mobile-description{
+    color: #dcdcdc;
+}
+.light-theme .showcase-item-mobile-title{
+    color: #4c4c4c;
+}
+.light-theme .showcase-item-mobile-description{
+    color: #606060;
+}
 </style>

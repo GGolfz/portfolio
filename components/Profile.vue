@@ -227,7 +227,6 @@ export default {
     }
     .about-quote {
         font-family: 'Montserrat', sans-serif;
-        color:#f8f8f8
     }
     .about-name {
         font-family: 'Titillium Web', sans-serif;
@@ -248,6 +247,12 @@ export default {
 .light-content blockquote.about-me {
   border-left: 0.2em solid #606060;
   color: #606060;
+}
+.dark-content .about-quote{
+  color:#f8f8f8;
+}
+.light-content .about-quote{
+  color: #2f2f2f;
 }
 .dark-content .about-title {
   color: #CBB7A6;
