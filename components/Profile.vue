@@ -42,6 +42,12 @@
                           Current GPAX : 3.88
                           </div>
                           <div class="about-edu-item">
+                          <strong class="about-title">Ramkhamhaeng University</strong> <br/>
+                          Studying Bachelor's degree (4<sup>th</sup>&nbsp;year) of 
+                          Business Administration (Management), Faculty of Business Administration.<br/>
+                          Current GPAX : 2.55
+                          </div>
+                          <div class="about-edu-item">
                           <strong class="about-title">Wat Raja O Ros School</strong> <br/>
                           Studying Science - Mathematics Program. <br/>
                           GPAX : 3.97
