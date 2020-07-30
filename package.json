@@ -1,6 +1,6 @@
 {
   "homepage": "https://ggolfz.github.io/portfolio",
-  "name": "portfolio",
+  "name": "GGolfz",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -10,7 +10,6 @@
     "start": "nuxt start",
     "export": "nuxt export",
     "serve": "nuxt serve",
-    "test": "jest",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
