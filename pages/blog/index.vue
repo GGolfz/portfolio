@@ -5,9 +5,14 @@
         <h1 :class="dark?'dark-blog-header blog-header':'light-blog-header blog-header'">Blog</h1>
       </el-col>
       <el-col :span="24">
-        <el-row style="display:flex;justify-content:center;padding: 2% 6%">
+        <el-row style="display:flex;justify-content:center;padding: 2% 6% 1% 6%">
           <el-col :xs="24" :md="8" :sm="12">
             <el-input v-model="search" placeholder="Search by title" />
+          </el-col>
+        </el-row>
+        <el-row v-if="message!=''" style="display:flex;justify-content:center;padding: 0% 6%">
+          <el-col :xs="24" :md="8" :sm="12">
+            {{message}}
           </el-col>
         </el-row>
         <el-row>
@@ -34,7 +39,8 @@ export default {
       search: '',
       show: [],
       tags: ["All"],
-      clear: false
+      clear: false,
+      message: ''
     }
   },
   props: {
@@ -55,6 +61,7 @@ export default {
   },
   methods: {
     searchtag(tag){
+      this.message = ''
       this.clear = true
       this.search = ''
       if(tag == 'All'){
@@ -72,16 +79,15 @@ export default {
       else {
         if(val == ''){
           this.show = this.data
+          this.message =''
         } else{
-          this.show = this.data.filter(a=> {return new RegExp(val.toLowerCase()).test(a.title.substring(0,val.length).toLowerCase())})
+          this.show = this.data.filter(a=> {return new RegExp(val.toLowerCase()).test(a.title.toLowerCase())})
+          this.show = this.show.sort((a,b)=> a.title.toLowerCase().indexOf(val) - b.title.toLowerCase().indexOf(val))
           if(this.show.length == 0){
             this.show = this.data
-            this.$message({
-              type: 'error',
-              showClose: true,
-              message:'Not Found',
-              duration: '1000'
-              })
+            this.message= 'Not Found'
+          } else{
+            this.message= 'Found '+ this.show.length+ ' posts'
           }
         } 
       }
