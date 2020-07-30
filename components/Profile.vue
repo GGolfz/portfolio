@@ -64,7 +64,7 @@
                             <el-row>
                                 <el-col :xs="24" :sm="12" :md="12" class="about-skill-item">
                                     <div class="about-title">
-                                    😍 Proficient with :
+                                    😍 Proficient in :
                                     </div>
                                     <li v-for="(data,index) in proficient" :key="index" class="about-skill-item-list">
                                         {{data}}
