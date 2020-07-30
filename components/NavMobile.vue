@@ -128,7 +128,9 @@ export default {
   background: none !important;
 }
 .mo {
-    height: 80px;
+  height: 80px;
+  display:flex;
+  align-items: center;
 }
 .dark a {
   font-weight: 400;

@@ -14,15 +14,17 @@
         </svg>
       </div>
       <router-view :dark="val" style="margin-top:80px" />
+      <Footer :dark="val"/>
   </div>
 </template>
 
 <script>
 import Nav from '../components/Nav'
 import NavMobile from '../components/NavMobile'
+import Footer from '../components/footer'
 export default {
   components:{
-    Nav,NavMobile
+    Nav,NavMobile,Footer
   },
   data() {
     return {
@@ -40,7 +42,7 @@ export default {
     display: none !important;
   }
   .mobile {
-    display: block;
+    display: flex;
   }
 }
 @media only screen and (min-width: 601px) {

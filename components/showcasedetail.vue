@@ -90,6 +90,9 @@ export default {
     .showcase-nav-img {
         display: none;
     }
+    .showcase-nav {
+    padding:6% 8% 0% 8%;
+    }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
     .showcase-detail{
@@ -104,6 +107,9 @@ export default {
     }
     .showcase-detail-title{
         display:none
+    }
+    .showcase-nav {
+        padding: 4% 8% 0% 8%;
     }
 }
 @media only screen and (min-width: 1024px) {
@@ -123,6 +129,9 @@ export default {
     .showcase-nav-img img{
         width:50%;
     }
+    .showcase-nav {
+        padding-top:4%;
+    }
 }
 .showcase-detail-title {
     font-weight: 600;
@@ -137,19 +146,22 @@ export default {
     font-family: 'Montserrat', sans-serif;
 }
 .dark-theme .showcase-detail-title{
-    color: #bdbdbd;
+    color: #f8f8f8;
+}
+.dark-theme .showcase-detail-mobile-title{
+    color: #f8f8f8;
 }
 .dark-theme .showcase-detail-description{
     color: #dcdcdc;
 }
 .light-theme .showcase-detail-title{
-    color: #4c4c4c;
+    color: #2f2f2f;
+}
+.light-theme .showcase-detail-mobile-title{
+    color: #2f2f2f;
 }
 .light-theme .showcase-detail-description{
     color: #606060;
-}
-.showcase-nav {
-  margin-top: 2%;
 }
 .showcase-next-nav{
   text-align: left;
