@@ -59,6 +59,18 @@ export default {
     const data = await $content('blog').sortBy('createdAt','desc').fetch()
     return { data }
   },
+  head() {
+    return {
+      title: "GGolfz's Blog",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "GGolfz's Blog"
+        },
+      ],
+    };
+  },
   methods: {
     searchtag(tag){
       this.message = ''

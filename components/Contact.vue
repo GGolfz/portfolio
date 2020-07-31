@@ -4,7 +4,7 @@
           Contact
       </el-col>
       <el-col :xs="24" :sm="12" :md="8" class="contact-banner">
-          <img src="profile.jpg" width="100%"/>
+          <img src="contact-animate.png" width="100%"/>
       </el-col>
       <el-col :xs="24" :sm="12" :md="16">
           <el-row>

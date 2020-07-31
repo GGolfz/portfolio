@@ -1,18 +1,32 @@
 <template>
   <div :class="dark?'container dark-theme':'container light-theme'">
-    <div class="banner">
-      HOME PAGE - waiting for idea too.
-    </div>
+    <Terminal :dark="dark"/>
   </div>
 </template>
 
 <script>
+import Terminal from '../components/terminal'
 export default {
   props: {
     dark: Boolean
   },
+  components: {
+    Terminal
+  },
   mounted() {
     window.scrollTo(0,0);
+  },
+  head() {
+    return {
+      title: "GGolfz",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "GGolfz"
+        },
+      ],
+    };
   },
 }
 </script>

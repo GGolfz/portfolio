@@ -10,6 +10,20 @@ export default {
   props: {
     dark: Boolean
   },
+  head() {
+    return {
+      title: this.data.title || NUXT_CONFIG.head.title,
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content:
+            this.data.description ||
+            this.data.title + " - All about @GGolfz",
+        },
+      ],
+    };
+  },
   components: {
     BlogDetail
   },

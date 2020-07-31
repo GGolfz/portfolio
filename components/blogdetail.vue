@@ -415,6 +415,7 @@ h1 {
 h2 {
   font-weight: 600;
   font-family: 'Titillium Web', sans-serif;
+  margin-top: 3%;
 }
 .dark-content h2 {
   color: #dcdcdc;

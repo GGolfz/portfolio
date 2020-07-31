@@ -34,6 +34,18 @@ export default {
   mounted() {
     window.scrollTo(0, 0);
   },
+  head() {
+    return {
+      title: "GGolfz's Project",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "GGolfz's Project"
+        },
+      ],
+    };
+  },
   async asyncData({ $content, params }) {
     const data = await $content('showcase').sortBy('date', 'desc').fetch()
     const project = data.filter((el) => el.tag === 'project')

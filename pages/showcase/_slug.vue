@@ -16,6 +16,20 @@ export default {
   mounted() {
     window.scrollTo(0,0);
   },
+  head() {
+    return {
+      title: this.data.title || NUXT_CONFIG.head.title,
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content:
+            this.data.description ||
+            this.data.title + " - All about @GGolfz",
+        },
+      ],
+    };
+  },
   async asyncData ({ $content, params }) {
     const data = await $content('showcase', params.slug).fetch()
     const [prev, next] = await $content("showcase").where({ tag: data.tag })
