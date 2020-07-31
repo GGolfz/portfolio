@@ -33,6 +33,7 @@ export default {
 
 <style>
 .container {
+  padding: 3% 5%;
   margin: 0 auto;
   min-height: calc(100vh - 180px);
   height: auto;
