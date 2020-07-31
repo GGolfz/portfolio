@@ -93,7 +93,7 @@ export default {
                     this.script+= this.text.substring(0,1);
                     this.text = this.text.substring(1);
                 }
-            },20)
+            },100)
         },
                 
     },
