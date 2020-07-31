@@ -18,6 +18,8 @@ jobs:
           npm install
           npm run build
           npm run export
+        env:
+          GA_ID: UA-173507025-1  
       - name: Deploy
         uses: s0/git-publish-subdir-action@v2.3.0
         env:
@@ -25,4 +27,3 @@ jobs:
           BRANCH: gh-pages
           FOLDER: dist
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GA_ID: UA-173507025-1
