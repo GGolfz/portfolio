@@ -187,7 +187,7 @@ export default {
     }
     .terminal {
         width: 100%;
-        margin-top: 5%;
+        margin-top: 10%;
     }
     .terminalText {
         font-size:0.8em;
@@ -209,7 +209,7 @@ export default {
 @media only screen and (min-width: 768px) and (max-width: 1023px) and (orientation: portrait){
     .terminal {
         width: 80%;
-        margin-top: 3%;
+        margin-top: 8%;
     }
     .terminalScreen {
         padding: 20px;
