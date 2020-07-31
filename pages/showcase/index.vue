@@ -141,7 +141,9 @@ export default {
     const data = await $content('showcase').sortBy('date', 'desc').fetch()
     const award = data.filter((el) => el.tag === 'award').splice(0,6)
     const project = data.filter((el) => el.tag === 'project').splice(0,6)
-    return { award, project }
+    const award1 = award.sort((a,b)=> new Date(b.date).getTime() -new Date(a.date).getTime())
+    const project1 = project.sort((a,b)=> new Date(b.date).getTime() -new Date(a.date).getTime())
+    return { award:award1, project:project1 }
   },
 }
 </script>

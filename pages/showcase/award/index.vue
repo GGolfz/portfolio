@@ -49,6 +49,7 @@ export default {
   async asyncData({ $content, params }) {
     const data = await $content('showcase').sortBy('date', 'desc').fetch()
     const award = data.filter((el) => el.tag === 'award')
+    const award1 = award.sort((a,b)=> new Date(b.date).getTime() -new Date(a.date).getTime())
     return { award }
   },
 }

@@ -49,6 +49,7 @@ export default {
   async asyncData({ $content, params }) {
     const data = await $content('showcase').sortBy('date', 'desc').fetch()
     const project = data.filter((el) => el.tag === 'project')
+    const project1 = project.sort((a,b)=> new Date(b.date).getTime() -new Date(a.date).getTime())
     return { project }
   },
 }
