@@ -37,6 +37,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'google-site-verification', content: 'm1xMiv2eLLg484iC2NZL_PxiySQEL-N3LhyGev6ZlaU'},
       { hid: 'description', name: 'description', content: process.env.npm_package_description || 'GGolfz\'s portfolio' }
     ],
     link: [
