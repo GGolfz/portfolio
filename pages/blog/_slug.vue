@@ -21,6 +21,10 @@ export default {
             this.data.description ||
             this.data.title + " - All about @GGolfz",
         },
+        {
+          property: 'og:image',
+          content: this.data.blogimg
+        }
       ],
     };
   },
