@@ -32,11 +32,13 @@ Account Github และ Repository ที่เราต้องการท�
 จากนั้นก็ parse json ของ author เพื่อเอา username ของผู้ที่ commit ออกมา และเก็บลงในตัวแปร Commit List ที่เราประกาศไว้ตอนต้น <p style="text-align:center;margin:2% 0%"><img style="width:50%" src="/portfolio/blog/commit-img-06.png" /></p> 
 
 สุดท้ายแล้วก็ให้มันโพสลง Microsoft Team โดยเลือก action post a message (V3) และกรอก Team, Channel และ Message ตามภาพเลย
-<p style="text-align:center;margin:2% 0%"><img style="width:50%" src="/portfolio/blog/commit-img-06.png" /></p>
+<p style="text-align:center;margin:2% 0%"><img style="width:50%" src="/portfolio/blog/commit-img-07.png" /></p>
 
 ## Integrated with github
 
 เอาหละ หลังจากเราสร้าง flow เสร็จแล้วเราก็เอามันไปเชื่อมต่อกับ github ของเรากัน โดยเข้าไปที่ github repository ที่เราต้องการ เลือก setting และ webhooks จากนั้นกด Add webhook จากนั้นนำ HTTP Post Url ที่ flow ให้เรามาในขั้นตอนแรกมาใส่ เลือก content type เป็น application/json และเลือก event ที่ต้องการซึ่งในที่นี้ผมต้องการแค่ push event จากนั้นกด add webhook แล้วไปลอง commit กันเลยยยย
+
+<p style="text-align:center;margin:2% 0%"><img style="width:50%" src="/portfolio/blog/commit-img-08.png" /></p>
 
 ## Schema for parse JSON
 
