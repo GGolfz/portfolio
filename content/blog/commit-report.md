@@ -40,10 +40,18 @@ Account Github และ Repository ที่เราต้องการท�
 
 ## Schema for parse JSON
 
-<script src="https://gist.github.com/GGolfz/6c970745fa654a46c0f811ca4fb2490a.js"></script>
+JSON Parse 01
 
-<script src="https://gist.github.com/GGolfz/1aa2f5e51ea211f2d47f64aacee3f75c.js"></script>
+https://gist.github.com/GGolfz/6c970745fa654a46c0f811ca4fb2490a
 
-<script src="https://gist.github.com/GGolfz/5cacc9f93ffd3864eacb3135527d5477.js"></script>
+JSON Parse 02
 
-<script src="https://gist.github.com/GGolfz/c28ae7dbe653c4faef372b252e9397ef.js"></script>
+https://gist.github.com/GGolfz/1aa2f5e51ea211f2d47f64aacee3f75c
+
+JSON Parse 03
+
+https://gist.github.com/GGolfz/5cacc9f93ffd3864eacb3135527d5477
+
+JSON Parse 04
+
+https://gist.github.com/GGolfz/c28ae7dbe653c4faef372b252e9397ef
