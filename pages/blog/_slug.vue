@@ -23,7 +23,7 @@ export default {
         },
         {
           property: 'og:image',
-          content: this.data.blogimg
+          content: `https://ggolfz.github.io/portfolio/${this.data.blogimg}`
         }
       ],
     };
