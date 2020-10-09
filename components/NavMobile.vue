@@ -18,7 +18,11 @@
     </el-col>
     <el-col :span="12">
     <el-menu-item style="text-align:center;padding:0%;cursor:default" index="1" >
-      <img src="logo.png" alt="logo" height="100%" style="transform: scaleX(-1);cursor:pointer" @click="goto('Home')">
+      <picture>
+          <source type="image/webp" srcset="logo.webp">
+          <source type="image/png" srcset="logo.png">
+          <img src="logo.png" alt="logo" height="100%" style="transform: scaleX(-1);cursor:pointer" @click="goto('Home')"/>
+      </picture>
       <span :class="dark?'title-mobile title-dark':'title-mobile title-light'" @click="goto('Home')">GGolfz</span>
     </el-menu-item>
     </el-col>
@@ -44,7 +48,11 @@
             </el-col>
             <el-col :span="24"
                 style="margin-bottom:3%">
-                <img src="logo.png" alt="logo" width="50%" style="transform: scaleX(-1);cursor:pointer" @click="goto('Home')">
+                <picture>
+                    <source type="image/webp" srcset="logo.webp">
+                    <source type="image/png" srcset="logo.png">
+                    <img src="logo.png" alt="logo" width="50%" style="transform: scaleX(-1);cursor:pointer" @click="goto('Home')"/>
+                </picture>
             </el-col>
             <el-col :span="24">
                 <div

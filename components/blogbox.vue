@@ -2,7 +2,11 @@
   <div class="box" @click="goto(data.slug)">
       <el-row>
           <el-col :span="24">
-              <img width="100%" :src="data.blogimg"/>
+              <picture>
+                <source type="image/webp" :srcset="`${data.blogimg.split('.')[0]}.webp`">
+                <source type="image/png" :srcset="data.blogimg">
+                <img width="100%" :src="data.blogimg" alt="blog-img" />
+              </picture>
           </el-col>
           <el-col :span="24" :class="dark?'blog-dark blog-tag':'blog-light blog-tag'">
               <i class="far fa-bookmark" />
@@ -19,7 +23,11 @@
           <el-col :span="24" :class="dark?'blog-dark blog-author':'blog-light blog-author'">
               <el-row style="align-items:center;display:flex">
                   <el-col :span="4">
-                      <img src="profile.jpg" width="100%" style="border-radius:200px">
+                    <picture>
+                        <source type="image/webp" srcset="profile.webp">
+                        <source type="image/jpeg" srcset="profile.jpg">
+                        <img width="100%" style="border-radius:200px" src="profile.jpg"/>
+                    </picture>
                   </el-col>
                   <el-col :span="20" style="padding-left:3%">
                       <el-row>

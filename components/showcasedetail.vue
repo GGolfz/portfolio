@@ -5,7 +5,11 @@
             {{data.title}}
       </el-col>
       <el-col :xs="24" :sm="24" :md="12" class="showcase-detail-image">
-          <img :src="data.img" width="100%">
+          <picture>
+            <source type="image/webp" :srcset="`${data.img.split('.')[0]}.webp`">
+            <source type="image/png" :srcset="data.img">
+            <img width="100%" :src="data.img" alt="showcase-img" />
+          </picture>
       </el-col>
       <el-col :xs="24" :sm="24" :md="12" class="showcase-detail-content">
           <el-row>
@@ -32,7 +36,11 @@
             {{next.title}}
             </div>
             <div class="showcase-nav-img">
-              <img :src="next.img" width="60%">
+              <picture>
+                <source type="image/webp" :srcset="`${next.img.split('.')[0]}.webp`">
+                <source type="image/png" :srcset="next.img">
+                <img width="60%" :src="next.img" alt="next-showcase-img" />
+              </picture>
             </div>
           </a>
         </div>
@@ -50,7 +58,11 @@
             {{prev.title}}
             </div>
             <div class="showcase-nav-img">
-              <img :src="prev.img" width="60%">
+              <picture>
+                <source type="image/webp" :srcset="`${prev.img.split('.')[0]}.webp`">
+                <source type="image/png" :srcset="prev.img">
+                <img width="60%" :src="prev.img" alt="prev-showcase-img" />
+              </picture>
             </div>
           </a>
         </div>

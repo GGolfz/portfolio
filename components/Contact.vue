@@ -4,7 +4,11 @@
           Contact
       </el-col>
       <el-col :xs="24" :sm="12" :md="8" class="contact-banner">
-          <img src="contact-animate.png" width="100%"/>
+          <picture>
+            <source type="image/webp" srcset="contact-animate.webp">
+            <source type="image/png" srcset="contact-animate.png">
+            <img width="100%" src="contact-animate.png" alt="contact" />
+          </picture>
       </el-col>
       <el-col :xs="24" :sm="12" :md="16">
           <el-row>

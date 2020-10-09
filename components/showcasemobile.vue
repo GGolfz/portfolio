@@ -2,7 +2,11 @@
   <div style="width:100%;cursor:pointer" @click="goto(data.slug)">
   <el-row>
       <el-col :span="12" style="padding:2% 5% 2% 0%">
-          <img :src="data.img" width="100%">
+          <picture>
+            <source type="image/webp" :srcset="`${data.img.split('.')[0]}.webp`">
+            <source type="image/png" :srcset="data.img">
+            <img width="100%" :src="data.img" alt="showcase-img" />
+          </picture>
       </el-col>
       <el-col :span="12" style="text-align:start">
           <el-row>

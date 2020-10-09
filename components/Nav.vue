@@ -8,7 +8,11 @@
     :default-active="current"
   >
     <el-menu-item style="padding:0%" index="1" @click="goto('Home')">
-      <img src="logo.png" alt="logo" height="100%" style="transform: scaleX(-1);">
+      <picture>
+          <source type="image/webp" srcset="logo.webp">
+          <source type="image/png" srcset="logo.png">
+          <img src="logo.png" alt="logo" height="100%" style="transform: scaleX(-1);"/>
+      </picture>
       <span :class="dark?'title title-dark':'title title-light'">GGolfz</span>
     </el-menu-item>
     <el-menu-item
