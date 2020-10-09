@@ -5,9 +5,9 @@
       </el-col>
       <el-col :xs="24" :sm="12" :md="8" class="contact-banner">
           <picture>
-            <source type="image/webp" srcset="contact-animate.webp">
-            <source type="image/png" srcset="contact-animate.png">
-            <img width="100%" src="contact-animate.png" alt="contact" />
+            <source type="image/webp" srcset="contact.webp">
+            <source type="image/png" srcset="contact.png">
+            <img width="100%" src="contact.png" alt="contact" />
           </picture>
       </el-col>
       <el-col :xs="24" :sm="12" :md="16">
