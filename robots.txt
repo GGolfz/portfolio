@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Allow: /about
+Allow: /blog/*
+Allow: /showcase/*
+Allow: /contact
+
+Sitemap https://ggolfz.github.io/sitemap.xml
