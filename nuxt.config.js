@@ -1,5 +1,6 @@
 const fs = require('fs')
 const routes = []
+const urlroutes = []
 const getRoutes = async () =>{
   await fs.readdir('./content/',async (err,dirs)=>{
       for(let i of dirs){
@@ -7,6 +8,7 @@ const getRoutes = async () =>{
               for(let j of files){
                   let route = j.split('.')
                   routes.push('/'+i+'/'+route[0])
+                  urlroutes.push({url:'/'+i+'/'+route[0]})
               }
           })
       }
@@ -95,7 +97,8 @@ export default {
     ['@nuxtjs/google-analytics', {
       id: process.env.GA_ID || ''
     }],
-    "nuxt-compress"
+    "nuxt-compress",
+    "@nuxtjs/sitemap"
   ],
   /*
   ** Axios module configuration
@@ -117,6 +120,19 @@ export default {
         "~/plugins/remark-sub-super-modified.js"
       ],
       rehypePlugins: ["rehype-katex"]
+    }
+  },
+  sitemap: {
+    hostname: "https://ggolfz.github.io/portfolio",
+    routes: [
+      { url: "/", changefreq: "daily", priority: 1 },
+      { url: "/about" },
+      { url: "/contacts" },
+      ...urlroutes
+    ],
+    defaults: {
+      changefreq: "monthly",
+      priority: 0.8
     }
   },
   /*
