@@ -26,4 +26,4 @@ date: 2020-07-20
 - Sethanant Pipatpakorn 
 - Non Nontra
 
-Link : https://github.com/GGolfz/cs21-peer-mentor (Now is private waiting for end of activity)
+Link : https://github.com/GGolfz/cs21-peer-mentor
