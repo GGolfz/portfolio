@@ -54,10 +54,11 @@ export default {
         integrity:
           "sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq",
         crossorigin: "anonymous",
-        onload: "this.onload=null;this.rel='stylesheet'"
+        onload: "this.onload=null;this.rel='stylesheet'",
+        defer: true
       },
-      { rel: 'stylesheet', href:'https://fonts.googleapis.com/css2?family=Montserrat&family=Titillium+Web:wght@400;600&display=swap' },
-      { rel: 'stylesheet', href:'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css'}
+      { rel: 'stylesheet', href:'https://fonts.googleapis.com/css2?family=Montserrat&family=Titillium+Web:wght@400;600&display=swap', defer: true },
+      { rel: 'stylesheet', href:'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css', defer: true}
     ]
   },
   /*
