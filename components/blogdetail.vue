@@ -43,7 +43,11 @@
       >
         <el-row style="align-items: center; display: flex;">
           <el-col :xs="6" :sm="4" :md="2">
-            <img src="profile.jpg" width="100%" style="border-radius: 200px;" />
+            <picture>
+              <source type="image/webp" srcset="profile.webp">
+              <source type="image/jpeg" srcset="profile.jpg">
+              <img width="100%" style="border-radius:200px" src="profile.jpg"/>
+            </picture>
           </el-col>
           <el-col :xs="18" :sm="20" :md="22" style="padding-left: 2%;">
             <el-row>
@@ -63,7 +67,11 @@
     </el-row>
     <el-row class="blog-detail-image-header">
       <el-col :span="24">
-        <img :src="data.blogimg" width="100%" alt="blog-img" />
+        <picture>
+          <source type="image/webp" :srcset="`${data.blogimg.split('.')[0]}.webp`">
+          <source type="image/png" :srcset="data.blogimg">
+          <img width="100%" :src="data.blogimg" alt="blog-img" />
+        </picture>
       </el-col>
     </el-row>
     <el-row
@@ -109,7 +117,11 @@
             {{next.title}}
             </div>
             <div class="blog-nav-img">
-              <img :src="next.blogimg" width="60%">
+               <picture>
+                <source type="image/webp" :srcset="`${next.blogimg.split('.')[0]}.webp`">
+                <source type="image/png" :srcset="next.blogimg">
+                <img width="60%" :src="next.blogimg" alt="next-blog-img" />
+              </picture>
             </div>
           </a>
         </div>
@@ -127,7 +139,11 @@
             {{prev.title}}
             </div>
             <div class="blog-nav-img">
-              <img :src="prev.blogimg" width="60%">
+              <picture>
+                <source type="image/webp" :srcset="`${prev.blogimg.split('.')[0]}.webp`">
+                <source type="image/png" :srcset="prev.blogimg">
+                <img width="60%" :src="prev.blogimg" alt="prev-blog-img" />
+              </picture>
             </div>
           </a>
         </div>
