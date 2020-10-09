@@ -26,7 +26,7 @@
                     <picture>
                         <source type="image/webp" srcset="profile.webp">
                         <source type="image/jpeg" srcset="profile.jpg">
-                        <img width="100%" style="border-radius:200px" src="profile.jpg"/>
+                        <img width="100%" style="border-radius:200px" src="profile.jpg" alt="profile_ic"/>
                     </picture>
                   </el-col>
                   <el-col :span="20" style="padding-left:3%">
