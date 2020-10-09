@@ -33,6 +33,9 @@ export default {
   ** See https://nuxtjs.org/api/configuration-head
   */
   head: {
+    htmlAttrs: {
+      lang: 'en'
+    },
     title: process.env.npm_package_name || 'GGolfz',
     meta: [
       { charset: 'utf-8' },
@@ -90,7 +93,8 @@ export default {
     '@nuxt/content',
     ['@nuxtjs/google-analytics', {
       id: process.env.GA_ID || ''
-    }]
+    }],
+    "nuxt-compress"
   ],
   /*
   ** Axios module configuration
