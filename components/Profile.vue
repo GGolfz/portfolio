@@ -4,13 +4,16 @@
       <picture>
         <source type="image/webp" srcset="profile.webp" />
         <source type="image/jpeg" srcset="profile.jpg" />
-        <img width="100%" style="border-radius: 300px;" src="profile.jpg" alt="profile_pic" />
+        <img width="100%" style="border-radius: 300px;" src="profile.jpg" alt="ggolfz_pic" />
       </picture>
     </el-col>
     <el-col :xs="24" :sm="12" :md="16" class="about-content">
       <section>
         <h1 class="about-name">
           WISARUT KITTICHAROENPHONNGAM
+        </h1>
+        <h1 class="about-name">
+          ( GGolfz )
         </h1>
         <blockquote class="about-me">
           FULL STACK SOFTWARE DEVELOPER
