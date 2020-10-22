@@ -25,7 +25,7 @@ export default {
     data() {
         return{
             script:"",
-            prefix: "GGolfzs-MBP:~ ggolfz$ ",
+            prefix: "GGolfzs-MBP:~ ggolfz $ ",
             line:3,
             interval:null,
             text:"Hi there, I'm GGolfz\nA \"Full Stack Software Developer\"\nfrom Thailand.\nI'm just a little guy that has \nthe dream since childhood, that is \n\"I want to be a programmer\"\nand I also trust that we never \ngonna know if we never even try.\nThis website will let you get to\nknow me better.\nWelcome to my world :)\n   ____________      ______   \n  / ____/ ____/___  / / __/___\n / / __/ / __/ __ \\/ / /_/_  /\n/ /_/ / /_/ / /_/ / / __/ / /_\n\\____/\\____/\\____/_/_/   /___/\n"
