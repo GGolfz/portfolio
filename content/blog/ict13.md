@@ -5,7 +5,7 @@ blogimg: blog/blog_img_003.png
 alt: Review AI Competition
 tag: Competition
 author: WISARUT KITTICHAROENPHONNGAM
-readTime: 2 MINS READ
+readTime: 6 MINS READ
 ---
 # รีวิว การแข่งขันสุดยอดฝีมือฯ สาขา AI (CHATBOT)
 
