@@ -36,4 +36,4 @@ readTime: 6 MINS READ
 
 พอเข้ามาสู่ช่วงประกาศผลรางวัลจะเริ่มแจก ประกาศนียบัตรเข้าร่วมรอบชิงชนะเลิศให้แก่ทุกคนก่อน และ ประกาศรางวัลจาก สาขา IOT ก่อนและตามด้วย AI โดยเริ่มจาก อันดับ 3 > อันดับ 2 และ อันดับ 1 ซึ่งผมและเพื่อนก็ได้รับรางวัลในอันดับที่ 2 ของสาขา AI ครับ :)
 
-<p style="text-align:center;margin-top:2%"><img src="/portfolio/blog/ict13-01.HEIC" alt="my picture" width="50%" /> <br/> <span style="font-size:0.9em">นี่ผมครับ</span> </p>
+<p style="text-align:center;margin-top:2%"><img src="/portfolio/blog/ict13-01.png" alt="reward picture" width="50%" /></p>
