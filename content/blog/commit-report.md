@@ -1,13 +1,14 @@
 ---
-title: มาทำ Commit Report ด้วย Flow กัน
+title: มาทำ Commit Report ด้วย Flow กันเถอะ
 description: ทุก ๆ คน คงใช้ Github ในการทำงานอยู่แล้ว แต่จะดีกว่าไหมถ้าเราไม่ต้องเช็ค commit เอง
 blogimg: blog/blog_img_002.png
 alt: Commit Report with Flow
 tag: Automate
 author: WISARUT KITTICHAROENPHONNGAM
 readTime: 5 MINS READ
+date: 2020-09-19
 ---
-# มาทำ​ Commit Report ด้วย Flow กัน
+# มาทำ​ Commit Report ด้วย Flow กันเถอะ
 
 ทุก ๆ คน คงใช้ Github ในการทำงานอยู่แล้ว แต่จะดีกว่าไหมถ้าเราไม่ต้องมาเช็ค commit เวลามีคน push ขึ้น repository ด้วยตัวเอง แต่มีคนมารายงานให้ฟัง
 

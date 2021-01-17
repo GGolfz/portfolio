@@ -6,6 +6,7 @@ alt: The origin of this site
 tag: General
 author: WISARUT KITTICHAROENPHONNGAM
 readTime: 2 MINS READ
+date: 2020-09-13
 ---
 # The origin of this ต้นกำเนิดของเว็บนี้
 

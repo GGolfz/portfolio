@@ -6,6 +6,7 @@ alt: Review AI Competition
 tag: Competition
 author: WISARUT KITTICHAROENPHONNGAM
 readTime: 6 MINS READ
+date: 2020-11-10
 ---
 # รีวิว การแข่งขันสุดยอดฝีมือฯ สาขา AI (CHATBOT)
 
