@@ -49,7 +49,7 @@
                 <br />
                 Studying Bachelor's degree (2<sup>nd</sup>&nbsp;year) of
                 Computer Science, School of Information Technology.<br />
-                Current GPAX : 3.88
+                Current GPAX : 3.92
               </div>
               <div class="about-edu-item">
                 <strong class="about-title">Ramkhamhaeng University</strong>
