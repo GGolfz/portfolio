@@ -56,7 +56,7 @@ export default {
     })
   },
   async asyncData ({ $content, params }) {
-    const data = await $content('blog').sortBy('createdAt','desc').fetch()
+    const data = await $content('blog').sortBy('date','desc').fetch()
     return { data }
   },
   head() {

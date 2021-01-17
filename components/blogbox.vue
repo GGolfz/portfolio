@@ -35,7 +35,7 @@
                             {{data.author}}
                           </el-col>
                           <el-col :span="24" :class="dark?'blog-dark blog-time':'blog-light blog-time'">
-                            {{formatTime(data.createdAt)}} · {{data.readTime}}
+                            {{formatTime(data.date)}} · {{data.readTime}}
                           </el-col>
                       </el-row>
                   </el-col>
