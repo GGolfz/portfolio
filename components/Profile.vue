@@ -25,6 +25,7 @@
         <p class="about-me">
           I am a sophomore student in Computer Science, School of Information
           Technology, King Mongkut's University of Technology Thonburi (KMUTT).
+          And I am also Beta Microsoft Learn Student Ambassadors Thailand.
         </p>
       </section>
     </el-col>
@@ -71,13 +72,13 @@
         <el-col :xs="24" :sm="24" :md="14" class="about-tech-skill">
           <el-row>
             <el-col :span="24">
-              <h2 class="about-title">Technology Skills</h2>
+              <h2 class="about-title">Technology Skills ✨</h2>
             </el-col>
             <el-col :span="24">
               <el-row>
                 <el-col :xs="24" :sm="12" :md="12" class="about-skill-item">
                   <div class="about-title">
-                    😍 Proficient in :
+                    😍 Web Development :
                   </div>
                   <li
                     v-for="(data, index) in proficient"
@@ -89,7 +90,7 @@
                 </el-col>
                 <el-col :xs="24" :sm="12" :md="12" class="about-skill-item">
                   <div class="about-title">
-                    ⭐️ Familiar with :
+                    ⭐️ Mobile Development :
                   </div>
                   <li
                     v-for="(data, index) in familiar"
@@ -105,7 +106,7 @@
               <el-row>
                 <el-col :xs="24" :sm="12" :md="12" class="about-skill-item">
                   <div class="about-title">
-                    🔥 Experienced with :
+                    🔥 Database and Tools :
                   </div>
                   <li
                     v-for="(data, index) in experience"
@@ -117,7 +118,7 @@
                 </el-col>
                 <el-col :xs="24" :sm="12" :md="12" class="about-skill-item">
                   <div class="about-title">
-                    🤩 Other interests :
+                    🤩 Others Skills :
                   </div>
                   <li
                     v-for="(data, index) in interests"
@@ -150,37 +151,37 @@ export default {
     return {
       proficient: [
         'HTML & CSS',
-        'JavaScript',
+        'JavaScript & TypeScript',
+        'ReactJS & NextJS',
         'VueJS & NuxtJS',
-        'Java',
-        'RDBMS',
-        'Git & Github',
+        'NodeJS & Express',
+        'Flask & Django',
+        'Servlet & Spring'
       ],
       familiar: [
-        'Python 3',
-        'C & C++',
-        'TypeScript',
-        'NodeJS',
-        'ReactJS & NextJS',
-        'MongoDB',
-        'PHP',
+        'Flutter',
+        'Kotlin',
+        'Swift'
       ],
       experience: [
-        'Numpy & Pandas',
+        'RDBMS',
+        'MongoDB',
+        'CLI',
+        'Git & Github',
         'Docker',
         'Kubernetes',
-        'AngularJS',
-        'Servlet',
         'Firebase',
         'CI/CD',
         'Google Cloud & Azure',
-        'Ruby',
       ],
       interests: [
-        'Game Development',
-        'Mobile Development',
-        'Cyber Security',
-        'Artificial Intelligence',
+        'Ruby',
+        'PHP',
+        'C & C++',
+        'Python 3',
+        'Numpy & Pandas',
+        'Keras Tensorflow',
+        'Java',
       ],
     }
   },
