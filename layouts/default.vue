@@ -30,6 +30,19 @@ export default {
     return {
       val: false
     }
+  },
+  watch: {
+    val() {
+      localStorage.setItem('theme',this.val ? 'dark' : 'light');
+    }
+  },
+  mounted() {
+    let current = localStorage.getItem('theme')
+    if(current == 'dark'){
+      this.val = true;
+    } else {
+      this.val = false;
+    }
   }
 }
 </script>
