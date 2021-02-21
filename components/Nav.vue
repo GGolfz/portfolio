@@ -55,7 +55,7 @@ export default {
   },
   async mounted() {
     const path = this.$route.path.split('/')[1]
-    if(path == 'index'){
+    if(path == ''){
       this.current = '2'
       this.isHome = true
     } else {
