@@ -14,5 +14,5 @@ date: 2020-11-10
 ## เพื่อนร่วมทีม : Kaewket Saelee
 
 <p style="text-align:center;padding:4%">
-<img src="/portfolio/showcase/ict13-sub.JPG" width="500px" alt="ภาพรับรางวัล">
+<img src="/portfolio/showcase/ict13-sub.JPG" width="50%" alt="ภาพรับรางวัล">
 </p>
