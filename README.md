@@ -4,7 +4,7 @@
 
 Glad to see you! My name is Wisarut Kitticharoenphonngam. You can call me **Golf**. 
 
-I am a sophomore student in Computer Science, School of Information Technology, King Mongkut's University of Technology Thonburi (KMUTT).
+I am a junior student in Computer Science, School of Information Technology, King Mongkut's University of Technology Thonburi (KMUTT).
 
 I am interested in Competitive Programming, Website Development both Front-end and Back-end, Application Development on a portable device in terms of native and cross-platform including Data Science, Cybersecurity, Game Development, and Artificial Intelligence.
 
@@ -14,9 +14,9 @@ In addition, I am also interested in System Analysis and Design because I believ
 
 ### King Mongkut's University of Technology Thonburi
 
-Studying Bachelor's degree (2<sup>nd</sup> year) of Computer Science, School of Information Technology.
+Studying Bachelor's degree (3<sup>rd</sup> year) of Computer Science, School of Information Technology.
 
-Current GPAX : 3.88
+Current GPAX : 3.94
 
 ### Ramkhamhaeng University
 
