@@ -23,7 +23,7 @@
           You can call me <b>Golf</b>.
         </p>
         <p class="about-me">
-          I am a sophomore student in Computer Science, School of Information
+          I am a junior student in Computer Science, School of Information
           Technology, King Mongkut's University of Technology Thonburi (KMUTT).
           And I am also Beta Microsoft Learn Student Ambassadors Thailand.
         </p>
@@ -48,9 +48,9 @@
                   >King Mongkut's University of Technology Thonburi</strong
                 >
                 <br />
-                Studying Bachelor's degree (2<sup>nd</sup>&nbsp;year) of
+                Studying Bachelor's degree (3<sup>rd</sup>&nbsp;year) of
                 Computer Science, School of Information Technology.<br />
-                Current GPAX : 3.92
+                Current GPAX : 3.94
               </div>
               <div class="about-edu-item">
                 <strong class="about-title">Ramkhamhaeng University</strong>
