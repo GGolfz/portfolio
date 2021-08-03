@@ -14,5 +14,5 @@ date: 2019-12-03
 ## เพื่อนร่วมทีม : Kaewket Saelee
 
 <p style="text-align:center;padding:4%">
-<img src="/portfolio/showcase/ict12-sub.png" width="50%" alt="ภาพรับรางวัล">
+<img src="/showcase/ict12-sub.png" width="50%" alt="ภาพรับรางวัล">
 </p>

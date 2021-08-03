@@ -109,7 +109,7 @@
           : 'light-content blog-detail-content blog-nav'">
       <el-col :span="12" class="blog-next-nav">
         <div v-if="next">
-          <a :href="`/portfolio/blog/${next.slug}`">
+          <a :href="`/blog/${next.slug}`">
             <div class="blog-nav-sub">
               <i class="fa fa-arrow-left" aria-hidden="true" style="margin-right:2px" /> บทความถัดไป
             </div>
@@ -131,7 +131,7 @@
       </el-col>
       <el-col :span="12" class="blog-prev-nav">
         <div v-if="prev">
-          <a :href="`/portfolio/blog/${prev.slug}`">
+          <a :href="`/blog/${prev.slug}`">
             <div class="blog-nav-sub">
               บทความก่อนหน้า <i class="fa fa-arrow-right" aria-hidden="true" style="margin-left:2px"/>
             </div>

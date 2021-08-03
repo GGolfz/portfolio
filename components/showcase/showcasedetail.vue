@@ -28,7 +28,7 @@
       class="showcase-nav">
       <el-col :span="12" class="showcase-next-nav">
         <div v-if="next">
-          <a :href="`/portfolio/showcase/${next.slug}`">
+          <a :href="`/showcase/${next.slug}`">
             <div class="showcase-nav-sub">
               <i class="fa fa-arrow-left" aria-hidden="true" style="margin-right:2px" /> ถัดไป
             </div>
@@ -50,7 +50,7 @@
       </el-col>
       <el-col :span="12" class="showcase-prev-nav">
         <div v-if="prev">
-          <a :href="`/portfolio/showcase/${prev.slug}`">
+          <a :href="`/showcase/${prev.slug}`">
             <div class="showcase-nav-sub">
               ก่อนหน้า <i class="fa fa-arrow-right" aria-hidden="true" style="margin-left:2px"/>
             </div>

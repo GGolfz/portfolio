@@ -20,7 +20,7 @@ export default {
    */
   mode: 'universal',
   router: {
-    base: '/portfolio',
+    base: '/',
   },
   /*
    ** Nuxt target
