@@ -60,8 +60,8 @@
 </template>
 
 <script>
-import ShowcaseItem from '../../components/showcaseitem'
-import ShowcaseMobile from '../../components/showcasemobile'
+import ShowcaseItem from '../../components/showcase/showcaseitem'
+import ShowcaseMobile from '../../components/showcase/showcasemobile'
 export default {
   data() {
     return {

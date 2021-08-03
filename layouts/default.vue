@@ -19,9 +19,9 @@
 </template>
 
 <script>
-import Nav from '../components/Nav'
-import NavMobile from '../components/NavMobile'
-import Footer from '../components/footer'
+import Nav from '../components/layout/nav'
+import NavMobile from '../components/layout/navmobile'
+import Footer from '../components/layout/footer'
 export default {
   components:{
     Nav,NavMobile,Footer

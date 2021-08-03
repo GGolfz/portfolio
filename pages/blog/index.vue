@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import Box from '../../components/blogbox'
+import Box from '../../components/blog/blogbox'
 export default {
   components: {
     Box

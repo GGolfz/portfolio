@@ -1,5 +1,8 @@
 <template>
     <el-row :class="dark?'container dark-theme':'container light-theme'">
+      <el-col :span="24">
+        <a href="https://resume.ggolfz.codes">Interactive Resume</a>
+      </el-col>
         <el-col :span="24">
         <iframe src="/portfolio/resume.pdf" frameborder="0" 
             style="width:100%;height:100%;"/>

@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import ShowcaseItem from '../../../components/showcaseitem'
+import ShowcaseItem from '../../../components/showcase/showcaseitem'
 export default {
   data() {
     return {

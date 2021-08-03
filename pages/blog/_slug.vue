@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import BlogDetail from '../../components/blogdetail'
+import BlogDetail from '../../components/blog/blogdetail'
 export default {
   props: {
     dark: Boolean

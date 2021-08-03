@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import ShowcaseDetail from '../../components/showcasedetail'
+import ShowcaseDetail from '../../components/showcase/showcasedetail'
 export default {
   props: {
     dark: Boolean

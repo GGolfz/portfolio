@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import Contact from '../../components/contact'
+import Contact from '../../components/contact/contact'
 export default {
   props: {
     dark: Boolean
