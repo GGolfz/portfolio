@@ -69,18 +69,12 @@ export default {
           'https://fonts.googleapis.com/css2?family=Montserrat&family=Titillium+Web:wght@400;600&display=swap',
         defer: true,
       },
-      {
-        rel: 'stylesheet',
-        href:
-          'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css',
-        defer: true,
-      },
     ],
   },
   /*
    ** Global CSS
    */
-  css: ['element-ui/lib/theme-chalk/index.css'],
+  css: ['element-ui/lib/theme-chalk/index.css','style/all.css'],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
