@@ -23,7 +23,7 @@
           <source type="image/png" srcset="logo.png">
           <img src="logo.png" alt="logo" height="56px" width="56px" style="transform: scaleX(-1);cursor:pointer" @click="goto('Home')"/>
       </picture>
-      <header :class="dark?'title-mobile title-dark':'title-mobile title-light'" @click="goto('Home')">GGolfz</header>
+      <span :class="dark?'title-mobile title-dark':'title-mobile title-light'" @click="goto('Home')">GGolfz</span>
     </el-menu-item>
     </el-col>
     <el-col :span="6">
