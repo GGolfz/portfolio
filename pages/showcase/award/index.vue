@@ -5,12 +5,18 @@
         <el-row>
           <el-col :span="24" class="award-title">Award</el-col>
         </el-row>
-        <el-row>
-            <el-col :xs="24" :sm="12" :md="8" v-for="(el, index) in award" :key="index" class="award-item">
-                <ShowcaseItem :data="el" />
-            </el-col>
+        <el-row v-for="(data, index) in award" :key="index">
+          <el-col
+            :xs="24"
+            :sm="12"
+            :md="8"
+            v-for="(el, index) in data"
+            :key="index"
+            class="award-item"
+          >
+            <ShowcaseItem :data="el" />
+          </el-col>
         </el-row>
-        
       </el-col>
     </el-row>
   </div>
@@ -19,37 +25,46 @@
 <script>
 import ShowcaseItem from '../../../components/showcase/showcaseitem'
 export default {
-  data() {
-    return {
-    }
-  },
   props: {
     dark: Boolean,
   },
   components: {
-    ShowcaseItem
+    ShowcaseItem,
   },
-  methods: {
-  },
+  methods: {},
   head() {
     return {
       title: "GGolfz's Award",
       meta: [
         {
-          hid: "description",
-          name: "description",
-          content: "GGolfz's Award"
+          hid: 'description',
+          name: 'description',
+          content: "GGolfz's Award",
         },
       ],
-    };
+    }
   },
   mounted() {
-    window.scrollTo(0, 0);
+    window.scrollTo(0, 0)
   },
   async asyncData({ $content, params }) {
     const data = await $content('showcase').sortBy('date', 'desc').fetch()
-    const award = data.filter((el) => el.tag === 'award')
-    const award1 = award.sort((a,b)=> new Date(b.date).getTime() -new Date(a.date).getTime())
+    let award = []
+    let temp = []
+    let allAward = data
+      .filter((el) => el.tag === 'award')
+      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    for (let i = 0; i < allAward.length; i++) {
+      temp.push(allAward[i])
+      if ((i + 1) % 3 == 0) {
+        award.push(temp)
+        temp = []
+      }
+    }
+    if (temp.length != 0) {
+      award.push(temp)
+      temp = []
+    }
     return { award }
   },
 }
@@ -75,54 +90,53 @@ export default {
 }
 @media only screen and (max-width: 767px) {
   .award {
-    width:100%;
+    width: 100%;
     padding: 2% 5%;
   }
   .award-title {
-      font-size: 2.7em;
-      font-family: 'Titillium Web', sans-serif;
-      padding: 0% 0% 1% 0%;
+    font-size: 2.7em;
+    font-family: 'Titillium Web', sans-serif;
+    padding: 0% 0% 1% 0%;
   }
   .award-item {
-      padding: 5%;
+    padding: 5%;
   }
-
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .award {
-    width:100%;
+    width: 100%;
     padding: 2% 5%;
   }
   .award-title {
-      font-size: 2.7em;
-      font-family: 'Titillium Web', sans-serif;
-      padding: 0% 0% 1% 0%;
+    font-size: 2.7em;
+    font-family: 'Titillium Web', sans-serif;
+    padding: 0% 0% 1% 0%;
   }
   .award-item {
-      padding: 3%;
+    padding: 3%;
   }
 }
 @media only screen and (min-width: 1025px) {
   .award {
-    width:100%;
+    width: 100%;
     padding: 0% 2%;
-  }  
+  }
   .award-title {
-      font-size: 3.5em;
-      font-family: 'Titillium Web', sans-serif;
-      padding: 0% 0% 1% 0%;
+    font-size: 3.5em;
+    font-family: 'Titillium Web', sans-serif;
+    padding: 0% 0% 1% 0%;
   }
   .award-item {
-      padding: 2%;
+    padding: 2%;
   }
 }
 .award-title {
   cursor: default;
 }
 .dark-theme .award-title {
-  color:#f8f8f8;
+  color: #f8f8f8;
 }
 .light-theme .award-title {
-  color: #2F2F2F;
+  color: #2f2f2f;
 }
 </style>
