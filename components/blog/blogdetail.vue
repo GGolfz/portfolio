@@ -13,7 +13,7 @@
           dark ? 'blog-dark blog-content-tag' : 'blog-light blog-content-tag'
         "
       >
-        <i class="far fa-bookmark" />
+        <i class="far fa-bookmark" ></i>
         <span style="margin-left: 2px;">
           {{ data.tag }}
         </span>
@@ -111,7 +111,7 @@
         <div v-if="next">
           <a :href="`/blog/${next.slug}`">
             <div class="blog-nav-sub">
-              <i class="fa fa-arrow-left" aria-hidden="true" style="margin-right:2px" /> บทความถัดไป
+              <i class="fa fa-arrow-left" aria-hidden="true" style="margin-right:2px" ></i> บทความถัดไป
             </div>
             <div class="blog-nav-title">
             {{next.title}}
@@ -133,7 +133,7 @@
         <div v-if="prev">
           <a :href="`/blog/${prev.slug}`">
             <div class="blog-nav-sub">
-              บทความก่อนหน้า <i class="fa fa-arrow-right" aria-hidden="true" style="margin-left:2px"/>
+              บทความก่อนหน้า <i class="fa fa-arrow-right" aria-hidden="true" style="margin-left:2px"></i>
             </div>
             <div class="blog-nav-title">
             {{prev.title}}

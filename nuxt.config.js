@@ -74,7 +74,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['element-ui/lib/theme-chalk/index.css','style/all.css'],
+  css: ['element-ui/lib/theme-chalk/index.css','style/fafont.css','style/gfont.css'],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins

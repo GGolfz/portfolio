@@ -9,7 +9,7 @@
               </picture>
           </el-col>
           <el-col :span="24" :class="dark?'blog-dark blog-tag':'blog-light blog-tag'">
-              <i class="far fa-bookmark" />
+              <i class="far fa-bookmark"></i>
               <span style="margin-left:2px">
               {{data.tag}}
               </span>

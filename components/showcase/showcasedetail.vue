@@ -30,7 +30,7 @@
         <div v-if="next">
           <a :href="`/showcase/${next.slug}`">
             <div class="showcase-nav-sub">
-              <i class="fa fa-arrow-left" aria-hidden="true" style="margin-right:2px" /> ถัดไป
+              <i class="fa fa-arrow-left" aria-hidden="true" style="margin-right:2px"></i> ถัดไป
             </div>
             <div class="showcase-nav-title">
             {{next.title}}
@@ -52,7 +52,7 @@
         <div v-if="prev">
           <a :href="`/showcase/${prev.slug}`">
             <div class="showcase-nav-sub">
-              ก่อนหน้า <i class="fa fa-arrow-right" aria-hidden="true" style="margin-left:2px"/>
+              ก่อนหน้า <i class="fa fa-arrow-right" aria-hidden="true" style="margin-left:2px"></i>
             </div>
             <div class="showcase-nav-title">
             {{prev.title}}

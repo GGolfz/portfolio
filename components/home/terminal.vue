@@ -8,7 +8,7 @@
       </el-col>
       <el-col class="terminalName" :span="12">
         <div>
-          <i class="fab fa-apple" style="margin-right: 5px" />ggolfz — bash
+          <i class="fab fa-apple" style="margin-right: 5px" ></i>ggolfz — bash
         </div>
       </el-col>
       <el-col :span="6"> &nbsp; </el-col>
