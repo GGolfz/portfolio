@@ -318,7 +318,7 @@ blockquote.about-me {
   font-weight: bolder;
 }
 .light-content .about-title {
-  color: #c99d78;
+  color: #af8969;
   font-weight: bolder;
 }
 </style>

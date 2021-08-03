@@ -89,7 +89,7 @@
     :background-color="dark?'#0a0a0a':'#efefef'"
     style="border-right:none">
             <el-menu-item class="toc-title">
-              <span :style="dark?'color:#c99d78;font-weight:600;':'color:#d2aa88;font-weight:600'">Table of contents</span>
+              <span :style="dark?'color:#af8969;font-weight:600;':'color:#d2aa88;font-weight:600'">Table of contents</span>
             </el-menu-item>
             <el-menu-item v-for="header in data.toc" :key="header.id" class="toc-item">
               <a @click="gotoHash(header.id)">{{ header.text }}</a>
@@ -355,7 +355,7 @@ export default {
   margin-top: 5px;
 }
 .blog-dark.blog-content-tag {
-  color: #c99d78;
+  color: #af8969;
 }
 .blog-light.blog-content-tag {
   color: #d2aa88;
@@ -407,7 +407,7 @@ a .blog-nav-sub {
   color:#606060 !important;
 }
 .light-content a .blog-nav-title{
-  color:#c99d78 !important;
+  color:#af8969 !important;
 }
 h1.dark-content.blog-content-header {
   color: #f8f8f8;

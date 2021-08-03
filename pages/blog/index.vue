@@ -128,7 +128,7 @@ export default {
   justify-content: center;
 }
 .dark-theme .tag-list-item {
-    color: #c99d78;
+    color: #af8969;
 }
 .light-theme .tag-list-item {
     color: #d2aa88;

@@ -105,7 +105,7 @@ export default {
     margin-top: 5px;
 }
 .blog-dark.blog-tag {
-    color: #c99d78;
+    color: #af8969;
 }
 .blog-light.blog-tag {
     color: #d2aa88;

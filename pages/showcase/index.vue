@@ -310,7 +310,7 @@ export default {
   color: #2F2F2F;
 }
 .dark-theme .page-naviga {
-  color: #c99d78;
+  color: #af8969;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,.7);
 }
 .light-theme .page-naviga {

@@ -207,6 +207,6 @@ a .showcase-nav-sub {
   color:#606060 !important;
 }
 .light-theme a .showcase-nav-title{
-  color:#c99d78 !important;
+  color:#af8969 !important;
 }
 </style>

@@ -114,7 +114,7 @@ a {
 }
 .dark.el-menu--horizontal > .el-menu-item.is-active > a {
   padding-bottom: 5px;
-  border-bottom: 2px #c99d78 solid;
+  border-bottom: 2px #af8969 solid;
   font-weight: 600;
   color: #f8f8f8;
 }
