@@ -12,14 +12,14 @@
             alt="วงแหวนเว็บ"
             width="20"
             height="20"
-            src="https://webring.wonderful.software/webring.white.svg"
+            src="/webring.white.svg"
           />
           <img
             v-else
             alt="วงแหวนเว็บ"
             width="20"
             height="20"
-            src="https://webring.wonderful.software/webring.black.svg"
+            src="/webring.black.svg"
           />
         </a>
       </div>
