@@ -18,7 +18,7 @@ date: 2020-09-13
 ที่กำลังศึกษาอยู่ในสาขาวิทยาการคอมพิวเตอร์ โดยช่วงนี้เป็นช่วงปิดเทอมครับ
 ผมเลยมีเวลาค่อนข้างมาก ในการหาสิ่งใหม่ ๆ ทำ เลยทำให้เกิดขึ้นมาเป็นสิ่งนี้ครับ
 
-<p style="text-align:center;margin-top:2%"><img src="/portfolio/profile.jpg" alt="my picture" width="50%" /> <br/> <span style="font-size:0.9em">นี่ผมครับ</span> </p>
+<p style="text-align:center;margin-top:2%"><img src="/profile.jpg" alt="my picture" width="50%" /> <br/> <span style="font-size:0.9em">นี่ผมครับ</span> </p>
 
 
 ## Why this site ? 

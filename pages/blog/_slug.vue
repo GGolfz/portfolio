@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import BlogDetail from '../../components/blogdetail'
+import BlogDetail from '../../components/blog/blogdetail'
 export default {
   props: {
     dark: Boolean
@@ -23,7 +23,7 @@ export default {
         },
         {
           property: 'og:image',
-          content: `https://ggolfz.github.io/portfolio/${this.data.blogimg}`
+          content: `https://portfolio.ggolfz.codes/${this.data.blogimg}`
         }
       ],
     };
@@ -43,7 +43,6 @@ export default {
       .fetch();
     return { data, prev, next}
   },
-  
 }
 </script>
 
@@ -65,6 +64,4 @@ export default {
   background:#fcfcfc;
   color:#606060;
 }
-
-
 </style>

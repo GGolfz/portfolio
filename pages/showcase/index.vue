@@ -20,10 +20,10 @@
                 <ShowcaseItem :data="el" />
               </el-col>
               <div v-if="showaward !=0" class="page-naviga prev" @click="prevaward"  icon="el-icon-arrow-left" circle>
-                <i aria-hidden="true" class=" fa fa-chevron-left"/>
+                <i aria-hidden="true" class=" fa fa-chevron-left"></i>
               </div>
               <div v-if="showaward != award.length-size && award.length > size" class="page-naviga next" @click="nextaward"  icon="el-icon-arrow-right" circle>
-                <i aria-hidden="true" class=" fa fa-chevron-right"/>
+                <i aria-hidden="true" class=" fa fa-chevron-right"></i>
               </div>
             </el-row>
           </el-col>
@@ -43,10 +43,10 @@
                 <ShowcaseItem :data="el"/>
               </el-col>
               <div v-if="showproject !=0" class="page-naviga prev" @click="prevproject" circle>
-                <i aria-hidden="true" class=" fa fa-chevron-left"/>
+                <i aria-hidden="true" class=" fa fa-chevron-left"></i>
               </div>
               <div v-if="showproject != project.length-size && project.length > size" class="page-naviga next" @click="nextproject"  icon="el-icon-arrow-right" circle>
-                <i aria-hidden="true" class=" fa fa-chevron-right"/>
+                <i aria-hidden="true" class=" fa fa-chevron-right"></i>
               </div>
             </el-row>
           </el-col>
@@ -60,8 +60,8 @@
 </template>
 
 <script>
-import ShowcaseItem from '../../components/showcaseitem'
-import ShowcaseMobile from '../../components/showcasemobile'
+import ShowcaseItem from '../../components/showcase/showcaseitem'
+import ShowcaseMobile from '../../components/showcase/showcasemobile'
 export default {
   data() {
     return {
@@ -310,7 +310,7 @@ export default {
   color: #2F2F2F;
 }
 .dark-theme .page-naviga {
-  color: #c99d78;
+  color: #af8969;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,.7);
 }
 .light-theme .page-naviga {

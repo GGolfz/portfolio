@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Terminal from '../components/terminal'
+import Terminal from '../components/home/terminal'
 export default {
   props: {
     dark: Boolean

@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Profile from '../../components/Profile'
+import Profile from '../../components/about/profile'
 export default {
   props: {
     dark: Boolean

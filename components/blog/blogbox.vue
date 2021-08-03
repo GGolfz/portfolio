@@ -9,7 +9,7 @@
               </picture>
           </el-col>
           <el-col :span="24" :class="dark?'blog-dark blog-tag':'blog-light blog-tag'">
-              <i class="far fa-bookmark" />
+              <i class="far fa-bookmark"></i>
               <span style="margin-left:2px">
               {{data.tag}}
               </span>
@@ -105,7 +105,7 @@ export default {
     margin-top: 5px;
 }
 .blog-dark.blog-tag {
-    color: #c99d78;
+    color: #af8969;
 }
 .blog-light.blog-tag {
     color: #d2aa88;

@@ -28,9 +28,9 @@
       class="showcase-nav">
       <el-col :span="12" class="showcase-next-nav">
         <div v-if="next">
-          <a :href="`/portfolio/showcase/${next.slug}`">
+          <a :href="`/showcase/${next.slug}`">
             <div class="showcase-nav-sub">
-              <i class="fa fa-arrow-left" aria-hidden="true" style="margin-right:2px" /> ถัดไป
+              <i class="fa fa-arrow-left" aria-hidden="true" style="margin-right:2px"></i> ถัดไป
             </div>
             <div class="showcase-nav-title">
             {{next.title}}
@@ -50,9 +50,9 @@
       </el-col>
       <el-col :span="12" class="showcase-prev-nav">
         <div v-if="prev">
-          <a :href="`/portfolio/showcase/${prev.slug}`">
+          <a :href="`/showcase/${prev.slug}`">
             <div class="showcase-nav-sub">
-              ก่อนหน้า <i class="fa fa-arrow-right" aria-hidden="true" style="margin-left:2px"/>
+              ก่อนหน้า <i class="fa fa-arrow-right" aria-hidden="true" style="margin-left:2px"></i>
             </div>
             <div class="showcase-nav-title">
             {{prev.title}}
@@ -207,6 +207,6 @@ a .showcase-nav-sub {
   color:#606060 !important;
 }
 .light-theme a .showcase-nav-title{
-  color:#c99d78 !important;
+  color:#af8969 !important;
 }
 </style>

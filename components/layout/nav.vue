@@ -11,7 +11,7 @@
       <picture>
           <source type="image/webp" srcset="logo.webp">
           <source type="image/png" srcset="logo.png">
-          <img src="logo.png" alt="logo" height="100%" style="transform: scaleX(-1);"/>
+          <img src="logo.png" alt="logo" height="56px" width="56px" style="transform: scaleX(-1);"/>
       </picture>
       <span :class="dark?'title title-dark':'title title-light'">GGolfz</span>
     </el-menu-item>
@@ -114,7 +114,7 @@ a {
 }
 .dark.el-menu--horizontal > .el-menu-item.is-active > a {
   padding-bottom: 5px;
-  border-bottom: 2px #c99d78 solid;
+  border-bottom: 2px #af8969 solid;
   font-weight: 600;
   color: #f8f8f8;
 }

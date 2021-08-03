@@ -12,20 +12,20 @@
             alt="วงแหวนเว็บ"
             width="20"
             height="20"
-            src="https://webring.wonderful.software/webring.white.svg"
+            src="/webring.white.svg"
           />
           <img
             v-else
             alt="วงแหวนเว็บ"
             width="20"
             height="20"
-            src="https://webring.wonderful.software/webring.black.svg"
+            src="/webring.black.svg"
           />
         </a>
       </div>
       <div>All right reserved © by GGolfz</div>
       <div v-for="(data, index) of contact" :key="index" class="footer-icon">
-        <a :href="`${data.prefix}${data.value}`">
+        <a :href="`${data.prefix}${data.value}`" :aria-label="data.icon">
           <i
             :class="`fab fa-${data.icon}`"
             :style="dark ? `color:${darkcolor}` : `color:${lightcolor}`"

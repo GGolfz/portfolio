@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import ShowcaseDetail from '../../components/showcasedetail'
+import ShowcaseDetail from '../../components/showcase/showcasedetail'
 export default {
   props: {
     dark: Boolean
@@ -29,7 +29,7 @@ export default {
         },
         {
           property: 'og:image',
-          content: `https://ggolfz.github.io/portfolio/${this.data.img}`
+          content: `https://portfolio.ggolfz.codes/${this.data.img}`
         }
       ],
     };

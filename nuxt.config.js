@@ -20,7 +20,7 @@ export default {
    */
   mode: 'universal',
   router: {
-    base: '/portfolio',
+    base: '/',
   },
   /*
    ** Nuxt target
@@ -62,25 +62,13 @@ export default {
         crossorigin: 'anonymous',
         onload: "this.onload=null;this.rel='stylesheet'",
         defer: true,
-      },
-      {
-        rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css2?family=Montserrat&family=Titillium+Web:wght@400;600&display=swap',
-        defer: true,
-      },
-      {
-        rel: 'stylesheet',
-        href:
-          'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css',
-        defer: true,
-      },
+      }
     ],
   },
   /*
    ** Global CSS
    */
-  css: ['element-ui/lib/theme-chalk/index.css'],
+  css: ['element-ui/lib/theme-chalk/index.css','style/fafont.css','style/gfont.css'],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
@@ -146,7 +134,7 @@ export default {
     },
   },
   sitemap: {
-    hostname: 'https://ggolfz.github.io/',
+    hostname: 'https://portfolio.ggolfz.codes/',
     routes: () => {
       let route = [
         { url: '/', changefreq: 'daily', priority: 1 },
