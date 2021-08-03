@@ -17,7 +17,7 @@
         </el-row>
         <el-row>
           <el-col :span="24" class="tag-list">
-            <li @click="searchtag(tag)" class="tag-list-item" v-for="(tag,index) in tags" :key="index">{{tag}}</li>
+            <span @click="searchtag(tag)" class="tag-list-item" v-for="(tag,index) in tags" :key="index">{{tag}}</span>
           </el-col>
         </el-row>
       </el-col>

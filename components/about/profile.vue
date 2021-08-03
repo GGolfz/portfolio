@@ -4,7 +4,12 @@
       <picture>
         <source type="image/webp" srcset="profile.webp" />
         <source type="image/jpeg" srcset="profile.jpg" />
-        <img width="100%" style="border-radius: 300px;" src="profile.jpg" alt="ggolfz_pic" />
+        <img
+          width="100%"
+          style="border-radius: 300px;"
+          src="profile.jpg"
+          alt="ggolfz_pic"
+        />
       </picture>
     </el-col>
     <el-col :xs="24" :sm="12" :md="16" class="about-content">
@@ -31,8 +36,9 @@
     </el-col>
     <section class="about-content">
       <p class="about-me">
-        I love to do anything with computer like solving the competitive programming problem,
-        develop the website and mobile application and also interest in the scope of AI and Data Science.
+        I love to do anything with computer like solving the competitive
+        programming problem, develop the website and mobile application and also
+        interest in the scope of AI and Data Science.
       </p>
     </section>
     <el-col :span="24" class="about-content divider">
@@ -80,25 +86,29 @@
                   <div class="about-title">
                     😍 Web Development :
                   </div>
-                  <li
-                    v-for="(data, index) in proficient"
-                    :key="index"
-                    class="about-skill-item-list"
-                  >
-                    {{ data }}
-                  </li>
+                  <ul>
+                    <li
+                      v-for="(data, index) in proficient"
+                      :key="index"
+                      class="about-skill-item-list"
+                    >
+                      {{ data }}
+                    </li>
+                  </ul>
                 </el-col>
                 <el-col :xs="24" :sm="12" :md="12" class="about-skill-item">
                   <div class="about-title">
                     ⭐️ Mobile Development :
                   </div>
-                  <li
-                    v-for="(data, index) in familiar"
-                    :key="index"
-                    class="about-skill-item-list"
-                  >
-                    {{ data }}
-                  </li>
+                  <ul>
+                    <li
+                      v-for="(data, index) in familiar"
+                      :key="index"
+                      class="about-skill-item-list"
+                    >
+                      {{ data }}
+                    </li>
+                  </ul>
                 </el-col>
               </el-row>
             </el-col>
@@ -108,25 +118,29 @@
                   <div class="about-title">
                     🔥 Database and Tools :
                   </div>
-                  <li
-                    v-for="(data, index) in experience"
-                    :key="index"
-                    class="about-skill-item-list"
-                  >
-                    {{ data }}
-                  </li>
+                  <ul>
+                    <li
+                      v-for="(data, index) in experience"
+                      :key="index"
+                      class="about-skill-item-list"
+                    >
+                      {{ data }}
+                    </li>
+                  </ul>
                 </el-col>
                 <el-col :xs="24" :sm="12" :md="12" class="about-skill-item">
                   <div class="about-title">
                     🤩 Others Skills :
                   </div>
-                  <li
-                    v-for="(data, index) in interests"
-                    :key="index"
-                    class="about-skill-item-list"
-                  >
-                    {{ data }}
-                  </li>
+                  <ul>
+                    <li
+                      v-for="(data, index) in interests"
+                      :key="index"
+                      class="about-skill-item-list"
+                    >
+                      {{ data }}
+                    </li>
+                  </ul>
                 </el-col>
               </el-row>
             </el-col>
@@ -156,13 +170,9 @@ export default {
         'VueJS & NuxtJS',
         'NodeJS & Express',
         'Flask & Django',
-        'Servlet & Spring'
+        'Servlet & Spring',
       ],
-      familiar: [
-        'Flutter',
-        'Kotlin',
-        'Swift'
-      ],
+      familiar: ['Flutter', 'Kotlin', 'Swift'],
       experience: [
         'RDBMS',
         'MongoDB',
@@ -320,5 +330,10 @@ blockquote.about-me {
 .light-content .about-title {
   color: #af8969;
   font-weight: bolder;
+}
+ul {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
 }
 </style>
