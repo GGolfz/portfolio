@@ -25,7 +25,7 @@
       </div>
       <div>All right reserved © by GGolfz</div>
       <div v-for="(data, index) of contact" :key="index" class="footer-icon">
-        <a :href="`${data.prefix}${data.value}`">
+        <a :href="`${data.prefix}${data.value}`" :aria-label="data.icon">
           <i
             :class="`fab fa-${data.icon}`"
             :style="dark ? `color:${darkcolor}` : `color:${lightcolor}`"
