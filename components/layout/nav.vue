@@ -11,7 +11,7 @@
       <picture>
           <source type="image/webp" srcset="logo.webp">
           <source type="image/png" srcset="logo.png">
-          <img src="logo.png" alt="logo" height="100%" style="transform: scaleX(-1);"/>
+          <img src="logo.png" alt="logo" height="56px" width="56px" style="transform: scaleX(-1);"/>
       </picture>
       <span :class="dark?'title title-dark':'title title-light'">GGolfz</span>
     </el-menu-item>
