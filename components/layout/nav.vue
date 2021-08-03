@@ -13,7 +13,7 @@
           <source type="image/png" srcset="logo.png">
           <img src="logo.png" alt="logo" height="56px" width="56px" style="transform: scaleX(-1);"/>
       </picture>
-      <span :class="dark?'title title-dark':'title title-light'">GGolfz</span>
+      <header :class="dark?'title title-dark':'title title-light'">GGolfz</header>
     </el-menu-item>
     <el-menu-item
       v-for="(item, index) in menu"
