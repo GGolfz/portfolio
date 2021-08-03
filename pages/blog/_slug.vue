@@ -43,7 +43,6 @@ export default {
       .fetch();
     return { data, prev, next}
   },
-  
 }
 </script>
 
@@ -65,6 +64,4 @@ export default {
   background:#fcfcfc;
   color:#606060;
 }
-
-
 </style>

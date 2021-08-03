@@ -31,7 +31,6 @@ export default {
   components: {
     ShowcaseItem,
   },
-  methods: {},
   head() {
     return {
       title: "GGolfz's Award",

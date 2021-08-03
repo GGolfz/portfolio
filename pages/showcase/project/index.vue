@@ -31,7 +31,6 @@ export default {
   components: {
     ShowcaseItem,
   },
-  methods: {},
   mounted() {
     window.scrollTo(0, 0)
   },
