@@ -35,7 +35,7 @@ export default {
     dark: Boolean,
   },
   methods: {
-    before() {
+    setup() {
       let current = new Date()
       this.script += `Last login: ${this.formatTime(current)} on ggolfz\n\n`
       this.script += this.prefix
@@ -76,7 +76,7 @@ export default {
         weekday + ' ' + month + ' ' + day + ' ' + hours + ':' + mins + ':' + sec
       )
     },
-    todo() {
+    typing() {
       this.interval = setInterval(() => {
         if (this.text.length == 0) {
           clearInterval(this.interval)
@@ -101,8 +101,8 @@ export default {
     clearInterval(this.interval)
   },
   mounted() {
-    this.before()
-    this.todo()
+    this.setup()
+    this.typing()
   },
 }
 </script>
