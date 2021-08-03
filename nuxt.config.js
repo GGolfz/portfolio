@@ -62,13 +62,7 @@ export default {
         crossorigin: 'anonymous',
         onload: "this.onload=null;this.rel='stylesheet'",
         defer: true,
-      },
-      {
-        rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css2?family=Montserrat&family=Titillium+Web:wght@400;600&display=swap',
-        defer: true,
-      },
+      }
     ],
   },
   /*
