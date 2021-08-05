@@ -1,15 +1,12 @@
 <template>
-  <div :class="dark?'container dark-theme':'container light-theme'">
-    <Profile :dark="dark"/>
+  <div :class="$store.state.dark?'container dark-theme':'container light-theme'">
+    <Profile :dark="$store.state.dark"/>
   </div>
 </template>
 
 <script>
 import Profile from '../../components/about/profile'
 export default {
-  props: {
-    dark: Boolean
-  },
   components: {
     Profile
   },

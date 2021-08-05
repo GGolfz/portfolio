@@ -1,15 +1,12 @@
 <template>
-  <div :class="dark?'container dark-theme':'container light-theme'">
-    <Terminal :dark="dark"/>
+  <div :class="$store.state.dark?'container dark-theme':'container light-theme'">
+    <Terminal :dark="$store.state.dark"/>
   </div>
 </template>
 
 <script>
 import Terminal from '../components/home/terminal'
 export default {
-  props: {
-    dark: Boolean
-  },
   components: {
     Terminal
   },

@@ -28,7 +28,8 @@
     "remark-math": "^2.0.1",
     "remark-slug": "^6.0.0",
     "remark-squeeze-paragraphs": "^4.0.0",
-    "remark-unwrap-images": "^2.0.0"
+    "remark-unwrap-images": "^2.0.0",
+    "vuex": "^3.6.2"
   },
   "devDependencies": {
     "babel-core": "7.0.0-bridge.0",
