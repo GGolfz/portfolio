@@ -40,17 +40,99 @@
       </svg>
     </div>
     <main>
-        <h1 v-if="error.statusCode === 404">Page not found</h1>
-        <h1 v-else>An error occurred</h1>
-        <NuxtLink to="/">Home page</NuxtLink>
+      <h1 v-if="error.statusCode === 404">Page not found</h1>
+      <h1 v-else>An error occurred</h1>
+      <NuxtLink to="/">Home page</NuxtLink>
     </main>
     <Footer :dark="val" />
   </div>
 </template>
 
 <script>
-  export default {
-    props: ['error'],
-    layout: 'error'
-  }
+import Nav from '../components/layout/nav'
+import NavMobile from '../components/layout/navmobile'
+import Footer from '../components/layout/footer'
+export default {
+  components: {
+    Nav,
+    NavMobile,
+    Footer,
+  },
+  data() {
+    return {
+      val: false,
+    }
+  },
+  watch: {
+    val() {
+      localStorage.setItem('theme', this.val ? 'dark' : 'light')
+    },
+  },
+  mounted() {
+    let current = localStorage.getItem('theme')
+    if (current == 'dark') {
+      this.val = true
+    } else {
+      this.val = false
+    }
+  },
+  props: ['error'],
+  layout: 'error'
+}
 </script>
+<style>
+@media only screen and (max-width: 600px) {
+  .desktop {
+    display: none !important;
+  }
+  .mobile {
+    display: flex;
+  }
+}
+@media only screen and (min-width: 601px) {
+  .desktop {
+    display: flex;
+  }
+  .mobile {
+    display: none !important;
+  }
+}
+
+html {
+  font-family: 'Montserrat', sans-serif, 'Titillium Web', sans-serif;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+.desktop,
+.mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1200;
+}
+.toggle {
+  width: fit-content;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 1.5%;
+  border-radius: 50px;
+  border: 1px solid #f8f8f855;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  cursor: pointer;
+  z-index: 1000;
+}
+.light {
+  background: #ffcc00ee;
+}
+.dark {
+  background: #212121;
+}
+</style>
