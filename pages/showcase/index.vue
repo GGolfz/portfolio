@@ -1,5 +1,6 @@
 <template>
-  <div :class="dark ? 'container dark-theme' : 'container light-theme'">
+<div>
+  <div :class="$store.state.dark ? 'container dark-theme' : 'container light-theme'">
     <el-row class="showcase">
       <el-col :span="24">
         <el-row>
@@ -56,7 +57,7 @@
         </el-row>
       </el-col>
     </el-row>
-  </div>
+  </div></div>
 </template>
 
 <script>
@@ -69,9 +70,6 @@ export default {
       showproject: 0,
       size: 3
     }
-  },
-  props: {
-    dark: Boolean,
   },
   head() {
     return {

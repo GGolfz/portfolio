@@ -40,8 +40,7 @@
       </svg>
     </div>
     <main>
-      <Nuxt :dark="val" style="margin-top: 80px;"/>
-      <!-- <router-view :dark="val" style="margin-top: 80px;" /> -->
+      <Nuxt style="margin-top: 80px;"/>
     </main>
     <Footer :dark="val" />
   </div>
@@ -65,14 +64,18 @@ export default {
   watch: {
     val() {
       localStorage.setItem('theme', this.val ? 'dark' : 'light')
+      this.$store.commit('change', this.val)
+      console.log(this.val,this.$store.state.dark)
     },
   },
   mounted() {
     let current = localStorage.getItem('theme')
     if (current == 'dark') {
-      this.val = true
+      this.val = true;
+      this.$store.commit('change', true)
     } else {
-      this.val = false
+      this.val = false;
+      this.$store.commit('change', false)
     }
   },
 }

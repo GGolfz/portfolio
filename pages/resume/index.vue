@@ -1,5 +1,5 @@
 <template>
-    <el-row :class="dark?'container dark-theme':'container light-theme'">
+    <el-row :class="$store.state.dark?'container dark-theme':'container light-theme'">
       <el-col :span="24">
         <a href="https://resume.ggolfz.codes">Interactive Resume</a>
       </el-col>
@@ -12,10 +12,6 @@
 
 <script>
 export default {
-  props: {
-    dark: Boolean
-  },
-
   mounted() {
     window.scrollTo(0,0);
   },

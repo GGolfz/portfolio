@@ -1,15 +1,12 @@
 <template>
-  <div :class="dark?'container dark-theme':'container light-theme'">
-    <BlogDetail :data="data" :dark="dark" :prev="prev" :next="next" />
+  <div :class="$store.state.dark?'container dark-theme':'container light-theme'">
+    <BlogDetail :data="data" :dark="$store.state.dark" :prev="prev" :next="next" />
   </div>
 </template>
 
 <script>
 import BlogDetail from '../../components/blog/blogdetail'
 export default {
-  props: {
-    dark: Boolean
-  },
   head() {
     return {
       title: this.data.title || NUXT_CONFIG.head.title,

@@ -1,10 +1,10 @@
 <template>
-  <div :class="dark ? 'container dark-theme' : 'container light-theme'">
+  <div :class="$store.state.dark ? 'container dark-theme' : 'container light-theme'">
     <el-row>
       <el-col :span="24">
         <h1
           :class="
-            dark
+            $store.state.dark
               ? 'dark-blog-header blog-header'
               : 'light-blog-header blog-header'
           "
@@ -49,7 +49,7 @@
             v-for="(d, index) in data"
             :key="index"
           >
-            <Box :data="d" :dark="dark" />
+            <Box :data="d" :dark="$store.state.dark" />
           </el-col>
         </el-row>
       </el-col>
@@ -71,9 +71,6 @@ export default {
       clear: false,
       message: '',
     }
-  },
-  props: {
-    dark: Boolean,
   },
   mounted() {
     window.scrollTo(0, 0)

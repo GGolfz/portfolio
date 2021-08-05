@@ -1,7 +1,7 @@
 <template>
-  <div :class="dark?'container dark-theme':'container light-theme'">
+  <div :class="$store.state.dark?'container dark-theme':'container light-theme'">
     <div>
-      <Contact :dark="dark"/>
+      <Contact :dark="$store.state.dark"/>
     </div>
   </div>
 </template>
@@ -9,9 +9,6 @@
 <script>
 import Contact from '../../components/contact/contact'
 export default {
-  props: {
-    dark: Boolean
-  },
   components: {
     Contact
   },

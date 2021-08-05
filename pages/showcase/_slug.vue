@@ -1,15 +1,12 @@
 <template>
-  <div :class="dark?'container dark-theme':'container light-theme'">
-    <ShowcaseDetail :data="data" :dark="dark" :prev="prev" :next="next" />
+  <div :class="$store.state.dark?'container dark-theme':'container light-theme'">
+    <ShowcaseDetail :data="data" :dark="$store.state.dark" :prev="prev" :next="next" />
   </div>
 </template>
 
 <script>
 import ShowcaseDetail from '../../components/showcase/showcasedetail'
 export default {
-  props: {
-    dark: Boolean
-  },
   components: {
     ShowcaseDetail
   },

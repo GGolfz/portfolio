@@ -1,5 +1,5 @@
 <template>
-  <div :class="dark ? 'container dark-theme' : 'container light-theme'">
+  <div :class="$store.state.dark ? 'container dark-theme' : 'container light-theme'">
     <el-row class="award">
       <el-col :span="24">
         <el-row>
@@ -25,9 +25,6 @@
 <script>
 import ShowcaseItem from '../../../components/showcase/showcaseitem'
 export default {
-  props: {
-    dark: Boolean,
-  },
   components: {
     ShowcaseItem,
   },
