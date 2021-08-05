@@ -113,7 +113,6 @@ export default {
     }
     .card-contact {
         display: flex;
-        align-items: center;
     }
 }
 @media only screen and (min-width: 992px) {
@@ -136,7 +135,6 @@ export default {
     }    
     .card-contact {
         display: flex;
-        align-items: center;
     }
 }
 .dark-contact .contact-title{
