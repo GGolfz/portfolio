@@ -4,10 +4,10 @@
     <el-row>
       <el-col :span="24">
         <span class="contact-card-title">{{ data.name }}</span>
-        <i :class="`fab fa-${data.icon}`" :style="dark?`color:${data.darkcolor}`:`color:${data.lightcolor}`">{{data.icon}}</i>
+        <i :class="`fab fa-${data.icon}`" :style="dark?`color:${data.darkcolor}`:`color:${data.lightcolor}`"></i>
       </el-col>
       <el-col :span="24">
-        <span></span>
+        <span>{{data.value}}</span>
       </el-col>
     </el-row>
   </el-card>
