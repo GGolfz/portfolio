@@ -40,7 +40,8 @@
       </svg>
     </div>
     <main>
-      <router-view :dark="val" style="margin-top: 80px;" />
+      <Nuxt :dark="val" style="margin-top: 80px;"/>
+      <!-- <router-view :dark="val" style="margin-top: 80px;" /> -->
     </main>
     <Footer :dark="val" />
   </div>
