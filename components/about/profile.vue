@@ -64,7 +64,7 @@
                 Studying Bachelor's degree (4<sup>th</sup>&nbsp;year) of
                 Business Administration (Management), Faculty of Business
                 Administration.<br />
-                Current GPAX : 2.55
+                Current GPAX : 2.64
               </div>
               <div class="about-edu-item">
                 <strong class="about-title">Wat Raja O Ros School</strong>
