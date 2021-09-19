@@ -40,20 +40,12 @@
           </el-col>
         </el-row>
       </el-col>
-      <el-col :span="24" v-for="(data, index) in show" :key="index">
-        <el-row>
-          <el-col
-            :md="8"
-            :xs="24"
-            :sm="12"
-            v-for="(d, index) in data"
-            :key="index"
-          >
-            <Box :data="d" :dark="$store.state.dark" />
-          </el-col>
-        </el-row>
-      </el-col>
+      <el-col class="blog-list">
+      <template v-for="(boxdata, index) in show" >
+        <Box :data="boxdata" :key="index" :dark="$store.state.dark" />
+      </template></el-col>
     </el-row>
+    
   </div>
 </template>
 
@@ -74,21 +66,12 @@ export default {
   },
   mounted() {
     window.scrollTo(0, 0)
-    let temp = []
     this.data.forEach((el, index) => {
       if (this.tags.indexOf(el.tag) == -1) {
         this.tags.push(el.tag)
       }
-      temp.push(el)
-      if ((index + 1) % 3 == 0) {
-        this.show.push(temp)
-        temp = []
-      }
     })
-    if (temp.length != 0) {
-      this.show.push(temp)
-      temp = []
-    }
+    this.show = this.data;
   },
   async asyncData({ $content, params }) {
     const data = await $content('blog').sortBy('date', 'desc').fetch()
@@ -127,18 +110,19 @@ export default {
           this.show = this.data
           this.message = ''
         } else {
-          this.show = this.data.filter((a) => {
+          let temp =  this.data.filter((a) => {
             return new RegExp(val.toLowerCase()).test(a.title.toLowerCase())
           })
-          this.show = this.show.sort(
+          temp = temp.sort(
             (a, b) =>
               a.title.toLowerCase().indexOf(val) -
               b.title.toLowerCase().indexOf(val)
           )
-          if (this.show.length == 0) {
+          if (temp.length == 0) {
             this.show = this.data
             this.message = 'Not Found'
           } else {
+            this.show = temp;
             this.message = 'Found ' + this.show.length + ' posts'
           }
         }
@@ -196,5 +180,23 @@ export default {
 .light-theme {
   background: #fcfcfc;
   color: #606060;
+}
+.blog-list {
+  display:grid;
+}
+@media screen and (max-width: 767px) {
+  .blog-list {
+    grid-template-columns: auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .blog-list {
+    grid-template-columns: auto auto;
+  }
+}
+@media screen and (min-width: 992px) {
+  .blog-list {
+  grid-template-columns: auto auto auto;
+  }
 }
 </style>

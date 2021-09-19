@@ -126,6 +126,7 @@ export default {
     font-family: 'Montserrat', sans-serif;
     font-size: 1em;
     margin-top: 2px;
+    line-clamp: 2;
 }
 .blog-dark.blog-description {
     color: #dcdcdc;
