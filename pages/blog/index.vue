@@ -191,12 +191,12 @@ export default {
 }
 @media screen and (min-width: 768px) {
   .blog-list {
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(2,1fr);
   }
 }
 @media screen and (min-width: 992px) {
   .blog-list {
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(3,1fr);
   }
 }
 </style>
