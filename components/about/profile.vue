@@ -30,7 +30,7 @@
         <p class="about-me">
           I am a junior student in Computer Science, School of Information
           Technology, King Mongkut's University of Technology Thonburi (KMUTT).
-          And I am also Beta Microsoft Learn Student Ambassadors Thailand.
+          And I am also Google Developer Student Club Lead KMUTT and Beta Microsoft Learn Student Ambassadors Thailand.
         </p>
       </section>
     </el-col>
@@ -55,21 +55,20 @@
                 >
                 <br />
                 Studying Bachelor's degree (3<sup>rd</sup>&nbsp;year) of
-                Computer Science, School of Information Technology.<br />
+                Computer Science,<br/> School of Information Technology.<br />
                 Current GPAX : 3.94
               </div>
               <div class="about-edu-item">
                 <strong class="about-title">Ramkhamhaeng University</strong>
                 <br />
-                Studying Bachelor's degree (4<sup>th</sup>&nbsp;year) of
-                Business Administration (Management), Faculty of Business
-                Administration.<br />
-                Current GPAX : 2.64
+                Bachelor's degree of Business Administration (Management), <br/>
+                Faculty of Business Administration.<br />
+                GPAX : 2.60
               </div>
               <div class="about-edu-item">
                 <strong class="about-title">Wat Raja O Ros School</strong>
                 <br />
-                Studying Science - Mathematics Program. <br />
+                Science - Mathematics Program. <br />
                 GPAX : 3.97
               </div>
             </el-col>
@@ -88,7 +87,7 @@
                   </div>
                   <ul>
                     <li
-                      v-for="(data, index) in proficient"
+                      v-for="(data, index) in web"
                       :key="index"
                       class="about-skill-item-list"
                     >
@@ -102,7 +101,7 @@
                   </div>
                   <ul>
                     <li
-                      v-for="(data, index) in familiar"
+                      v-for="(data, index) in mobile"
                       :key="index"
                       class="about-skill-item-list"
                     >
@@ -120,7 +119,7 @@
                   </div>
                   <ul>
                     <li
-                      v-for="(data, index) in experience"
+                      v-for="(data, index) in database"
                       :key="index"
                       class="about-skill-item-list"
                     >
@@ -130,11 +129,11 @@
                 </el-col>
                 <el-col :xs="24" :sm="12" :md="12" class="about-skill-item">
                   <div class="about-title">
-                    🤩 Others Skills :
+                    🤩 AI and Data Science :
                   </div>
                   <ul>
                     <li
-                      v-for="(data, index) in interests"
+                      v-for="(data, index) in datasci"
                       :key="index"
                       class="about-skill-item-list"
                     >
@@ -163,7 +162,7 @@
 export default {
   data() {
     return {
-      proficient: [
+      web: [
         'HTML & CSS',
         'JavaScript & TypeScript',
         'ReactJS & NextJS',
@@ -171,9 +170,12 @@ export default {
         'NodeJS & Express',
         'Flask & Django',
         'Servlet & Spring',
+        "Ruby & Rails",
+        "PHP",
+        "Web3"
       ],
-      familiar: ['Flutter', 'Kotlin', 'Swift'],
-      experience: [
+      mobile: ['Flutter (Dart)', 'Kotlin', 'Swift'],
+      database: [
         'RDBMS',
         'MongoDB',
         'CLI',
@@ -181,17 +183,19 @@ export default {
         'Docker',
         'Kubernetes',
         'Firebase',
-        'CI/CD',
         'Google Cloud & Azure',
+        'Google Colab',
+        'Dialogflow',
       ],
-      interests: [
-        'Ruby',
-        'PHP',
-        'C & C++',
+      datasci: [
         'Python 3',
-        'Numpy & Pandas',
-        'Keras Tensorflow',
-        'Java',
+        'Numpy',
+        'Pandas',
+        'Matplotlib',
+        'Seaborn',
+        'Scikit-learn',
+        'Keras & Tensorflow',
+        'Darknet',
       ],
     }
   },
@@ -283,7 +287,7 @@ export default {
     border-top: 1px solid #7b7b7b;
   }
   .about-skill-item-list {
-    padding-left: 10%;
+    padding-left: 2%;
   }
 }
 .about-skill-item {
