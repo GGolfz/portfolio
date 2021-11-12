@@ -22,5 +22,5 @@ date: 2021-01-21
 - Sethanant Pipatpakorn 
 - Kittiyaporn Takrudthieng
 
-Link : https://github.com/GGolfz/cstimetable
+Link : https://github.com/GGolfz/cstimetable <br/>
 Demo : https://timetable.cscms.me/

@@ -4,7 +4,7 @@
       <div class="footer-icon">
         <a
           class="webring-icon"
-          href="https://webring.wonderful.software#ggolfz.codes"
+          href="https://webring.wonderful.software#ggolfz.me"
           title="วงแหวนเว็บ"
         >
           <img

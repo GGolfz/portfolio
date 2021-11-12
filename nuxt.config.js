@@ -134,7 +134,7 @@ export default {
     },
   },
   sitemap: {
-    hostname: 'https://portfolio.ggolfz.codes/',
+    hostname: 'https://portfolio.ggolfz.me/',
     routes: () => {
       let route = [
         { url: '/', changefreq: 'daily', priority: 1 },

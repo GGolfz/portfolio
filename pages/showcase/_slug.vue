@@ -26,7 +26,7 @@ export default {
         },
         {
           property: 'og:image',
-          content: `https://portfolio.ggolfz.codes/${this.data.img}`
+          content: `https://portfolio.ggolfz.me/${this.data.img}`
         }
       ],
     };

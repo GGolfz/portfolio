@@ -24,7 +24,6 @@ date: 2021-06-01
 - Kaewket Saelee
 - Kittiyapron Takrudthieng
 
-Link (App) : https://github.com/GGolfz/Famashi-App
-
+Link (App) : https://github.com/GGolfz/Famashi-App <br/>
 Link (Backend) : https://github.com/GGolfz/Famashi-Backend
  

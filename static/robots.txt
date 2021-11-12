@@ -5,4 +5,4 @@ Allow: /blog/*
 Allow: /showcase/*
 Allow: /contact
 
-Sitemap: https://portfolio.ggolfz.codes/sitemap.xml
+Sitemap: https://portfolio.ggolfz.me/sitemap.xml

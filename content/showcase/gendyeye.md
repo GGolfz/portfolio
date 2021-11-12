@@ -19,4 +19,5 @@ date: 2021-08-05
 
 <br/>
 
-Link : https://lab.ggolfz.codes/gendy
+Demo Link : https://lab.ggolfz.me/gendy <br/>
+Repo Link :

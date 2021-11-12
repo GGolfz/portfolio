@@ -26,7 +26,6 @@ date: 2021-05-02
 - Thanaphon Sombunkaeo
 - Sethanant Pipatpakorn
 
-Link (App) : https://github.com/GGolfz/Setthi
-
+Link (App) : https://github.com/GGolfz/Setthi <br/>
 Link (Backend) : https://github.com/thetkpark/setthi-backend
  

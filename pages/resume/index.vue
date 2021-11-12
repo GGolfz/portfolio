@@ -1,7 +1,7 @@
 <template>
     <el-row :class="$store.state.dark?'container dark-theme':'container light-theme'">
       <el-col :span="24">
-        <a href="https://resume.ggolfz.codes">Interactive Resume</a>
+        <a href="https://resume.ggolfz.me">Interactive Resume</a>
       </el-col>
         <el-col :span="24">
         <iframe src="/resume.pdf" frameborder="0" 

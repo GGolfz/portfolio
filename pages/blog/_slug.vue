@@ -20,7 +20,7 @@ export default {
         },
         {
           property: 'og:image',
-          content: `https://portfolio.ggolfz.codes/${this.data.blogimg}`
+          content: `https://portfolio.ggolfz.me/${this.data.blogimg}`
         }
       ],
     };
