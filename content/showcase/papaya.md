@@ -24,3 +24,5 @@ date: 2021-08-05
 
 <br/>
 Demo Link : https://papaya.ggolfz.me <br/>
+Repository (Frontend): https://github.com/ggolfz/papaya-frontend <br/>
+Repository (Modeling): https://github.com/ggolfz/papaya-classification
