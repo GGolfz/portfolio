@@ -4,7 +4,7 @@ description: Papaya Ripeness Classification
 img: showcase/papaya.png
 alt: Gendy Eye
 tag: project
-date: 2021-08-05
+date: 2021-11-12
 ---
 
 <b style="font-size:1.3em"> Papaya PogPog </b> is a web application for the classification of papaya ripeness. This project is a part of CSC340 Artificial Intelligence course. We develop a deep learning model for classifying papaya ripeness. And we deploy this model to this website as the demo of our project.
@@ -19,10 +19,12 @@ date: 2021-08-05
 
 <br/>
 <p style="font-size:1.6em;margin-bottom:2%">Project Mate</p>
+
 - Kaewket Saelee
 - Kavisara Srisuwatcharee
 
 <br/>
+
 Demo Link : https://papaya.ggolfz.me <br/>
 Repository (Frontend): https://github.com/ggolfz/papaya-frontend <br/>
 Repository (Modeling): https://github.com/ggolfz/papaya-classification
