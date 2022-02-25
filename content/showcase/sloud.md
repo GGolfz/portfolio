@@ -22,4 +22,4 @@ date: 2021-02-25
 
 - Kittiyaporn Takrudthieng
 
-Link : https://aka.cscms.me/mungming
+Link : https://aka.cscms.me/sloud
