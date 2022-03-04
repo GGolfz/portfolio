@@ -22,7 +22,7 @@ date: 2021-06-01
 <p style="font-size:1.6em;margin-bottom:2%">Project Mate</p>
 
 - Kaewket Saelee
-- Kittiyapron Takrudthieng
+- kittiyaporn Takrudthieng
 
 Link (App) : https://github.com/GGolfz/Famashi-App <br/>
 Link (Backend) : https://github.com/GGolfz/Famashi-Backend
