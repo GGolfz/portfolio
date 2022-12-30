@@ -21,7 +21,7 @@ GPAX : 3.96
 
 Studied Bachelor's degree of Business Administration (Management), Faculty of Business Administration.
 
-GPAX : 2.60
+GPAX : 2.62
 
 ### Wat Raja O Ros School
 
