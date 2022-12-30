@@ -140,8 +140,6 @@ export default {
         { url: '/', changefreq: 'daily', priority: 1 },
         { url: '/about', priority: 0.9 },
         { url: '/contact', priority: 0.9 },
-        { url: '/resume', priority: 0 },
-        '/blog',
         '/showcase',
         '/showcase/award',
         '/showcase/project',
