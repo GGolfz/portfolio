@@ -28,9 +28,7 @@
           You can call me <b>Golf</b>.
         </p>
         <p class="about-me">
-          I am a junior student in Computer Science, School of Information
-          Technology, King Mongkut's University of Technology Thonburi (KMUTT).
-          And I am also Google Developer Student Club Lead KMUTT and Beta Microsoft Learn Student Ambassadors Thailand.
+          I'm currently working as a software engineer. I graduated from the Computer Science program at the School of Information Technology at King Mongkut's University of Technology Thonburi (KMUTT). During my time at KMUTT, I had the opportunity to serve as the lead for the Google Developer Student Club and I was also a Beta Microsoft Learn Student Ambassador for Thailand. I'm excited to share my knowledge and experience with you all.
         </p>
       </section>
     </el-col>
@@ -50,13 +48,11 @@
             </el-col>
             <el-col :span="24" class="about-edu">
               <div class="about-edu-item">
-                <strong class="about-title"
-                  >King Mongkut's University of Technology Thonburi</strong
-                >
+                <strong class="about-title">King Mongkut's University of Technology Thonburi</strong>
                 <br />
-                Studying Bachelor's degree (3<sup>rd</sup>&nbsp;year) of
-                Computer Science,<br/> School of Information Technology.<br />
-                Current GPAX : 3.95
+                Bachelor's degree of Computer Science,<br/>
+                School of Information Technology.<br />
+                GPAX : 3.96
               </div>
               <div class="about-edu-item">
                 <strong class="about-title">Ramkhamhaeng University</strong>
